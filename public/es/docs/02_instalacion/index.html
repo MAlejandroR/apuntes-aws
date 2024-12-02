@@ -1,0 +1,795 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/certificado/php/es/docs/02_instalacion/index.xml">
+<link rel="alternate" type="text/html" href="https://web.infenlaces.com/certificado/php/es/docs/02_instalacion/_print/">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/certificado/php/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/certificado/php/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/certificado/php/favicons/android-192x192.png" sizes="192x192">
+
+<title>Instalación | Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web</title>
+<meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
+
+<meta property="og:url" content="https://web.infenlaces.com/certificado/php/es/docs/02_instalacion/">
+  <meta property="og:site_name" content="Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web">
+  <meta property="og:title" content="Instalación">
+  <meta property="og:description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Instalación">
+  <meta itemprop="description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
+  <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
+  <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
+  <meta itemprop="wordCount" content="968">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Instalación">
+  <meta name="twitter:description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
+
+
+<link rel="preload" href="/certificado/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" as="style"><link href="/certificado/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row ">
+  <a class="navbar-brand" href="/certificado/php/es/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/certificado/php/images/logo.png" alt="Logo" width="150" height="auto" />
+    </span><span class="navbar-brand__name">Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/certificado/php/en/">English</a></li>
+    <li><a class="dropdown-item" href="/certificado/php/fr/">Francés</a></li>
+    </ul>
+</div></li>
+      <li class="td-light-dark-menu nav-item dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/certificado/php/en/">English</a></li>
+    <li><a class="dropdown-item" href="/certificado/php/fr/">Francés</a></li>
+    </ul>
+</div>
+    </div>
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-certificadophpesdocs-li">
+  <a href="/certificado/php/es/docs/" title="PHP " class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-certificadophpesdocs"><i class="fa-brands fa-php"></i><span class="">PHP</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs01_introduccion-li">
+  <input type="checkbox" id="m-certificadophpesdocs01_introduccion-check"/>
+  <label for="m-certificadophpesdocs01_introduccion-check"><a href="/certificado/php/es/docs/01_introduccion/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs01_introduccion"><i class="fas fa-book"></i><span class="">Introducción</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-certificadophpesdocs02_instalacion-li">
+  <input type="checkbox" id="m-certificadophpesdocs02_instalacion-check" checked/>
+  <label for="m-certificadophpesdocs02_instalacion-check"><a href="/certificado/php/es/docs/02_instalacion/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs02_instalacion"><i class="fas fa-download"></i><span class="td-sidebar-nav-active-item">Instalación</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs03_empezando-li">
+  <input type="checkbox" id="m-certificadophpesdocs03_empezando-check"/>
+  <label for="m-certificadophpesdocs03_empezando-check"><a href="/certificado/php/es/docs/03_empezando/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs03_empezando"><i class="fas fa-play"></i><span class="">Empezando</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs04_escribiendo-li">
+  <input type="checkbox" id="m-certificadophpesdocs04_escribiendo-check"/>
+  <label for="m-certificadophpesdocs04_escribiendo-check"><a href="/certificado/php/es/docs/04_escribiendo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs04_escribiendo"><i class="fas fa-keyboard"></i><span class="">Escribiendo</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs05_declaraciones-li">
+  <input type="checkbox" id="m-certificadophpesdocs05_declaraciones-check"/>
+  <label for="m-certificadophpesdocs05_declaraciones-check"><a href="/certificado/php/es/docs/05_declaraciones/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs05_declaraciones"><i class="fas fa-file-alt"></i><span class="">Declaraciones</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs06_control_selectivo-li">
+  <input type="checkbox" id="m-certificadophpesdocs06_control_selectivo-check"/>
+  <label for="m-certificadophpesdocs06_control_selectivo-check"><a href="/certificado/php/es/docs/06_control_selectivo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs06_control_selectivo"><i class="fas fa-cogs"></i><span class="">Control</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs07_control_repetitivo-li">
+  <input type="checkbox" id="m-certificadophpesdocs07_control_repetitivo-check"/>
+  <label for="m-certificadophpesdocs07_control_repetitivo-check"><a href="/certificado/php/es/docs/07_control_repetitivo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs07_control_repetitivo"><i class="fas fa-sync"></i><span class="">Iteraciones</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs08_expresiones-li">
+  <input type="checkbox" id="m-certificadophpesdocs08_expresiones-check"/>
+  <label for="m-certificadophpesdocs08_expresiones-check"><a href="/certificado/php/es/docs/08_expresiones/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs08_expresiones"><i class="fas fa-calculator"></i><span class="">Expresiones</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-certificadophpesdocs11_funciones-li">
+  <input type="checkbox" id="m-certificadophpesdocs11_funciones-check"/>
+  <label for="m-certificadophpesdocs11_funciones-check"><a href="/certificado/php/es/docs/11_funciones/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs11_funciones"><i class="fas fa-list-ul"></i><span class="">Funciones</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs11_funcionespracitca-li">
+  <input type="checkbox" id="m-certificadophpesdocs11_funcionespracitca-check"/>
+  <label for="m-certificadophpesdocs11_funcionespracitca-check"><a href="/certificado/php/es/docs/11_funciones/pracitca/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-certificadophpesdocs11_funcionespracitca"><i class="fas fa-keyboard"></i><span class="">Prácticas</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs12_formularios-li">
+  <input type="checkbox" id="m-certificadophpesdocs12_formularios-check"/>
+  <label for="m-certificadophpesdocs12_formularios-check"><a href="/certificado/php/es/docs/12_formularios/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs12_formularios"><i class="fa-brands fa-wpforms"></i><span class="">Introducción a Formularios</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-certificadophpesdocs20_ejercicios-li">
+  <input type="checkbox" id="m-certificadophpesdocs20_ejercicios-check"/>
+  <label for="m-certificadophpesdocs20_ejercicios-check"><a href="/certificado/php/es/docs/20_ejercicios/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-certificadophpesdocs20_ejercicios"><i class="fas fa-play-circle"></i><span class="">Ejercicios</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/certificado/php/es/docs/02_instalacion/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#instalando-en-ubuntu">Instalando en Ubuntu</a></li>
+        <li><a href="#instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</a></li>
+        <li><a href="#creación-de-docker">Creación de docker</a></li>
+        <li><a href="#temas-de-permisos-de-apache">Temas de permisos de <strong>Apache</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/certificado/php/es/docs/">PHP</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Instalación</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Instalación</h1>
+  
+	<header class="article-meta">
+		
+</header>
+	<h3 id="instalando-en-ubuntu">Instalando en Ubuntu</h3>
+<ul>
+<li>En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos:</li>
+</ul>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Actualizar los repositorios:
+
+
+</span>
+</strong>
+
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#75715e">#Actualizar repositorios
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">update</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Instalar Apache2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">apache2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Instalar php y el módulo de php para apache 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">php</span> <span style="color:#a6e22e">libapache2</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mod</span><span style="color:#f92672">-</span><span style="color:#a6e22e">php</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">restart</span> <span style="color:#a6e22e">apache2</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</h3>
+<p>XAMPP es una solución sencilla para tener Apache, PHP, y MySQL en Windows. Sigue estos pasos para instalarlo:</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Descargar XAMPP
+
+
+</span>
+</strong>
+
+Ve al sitio web oficial de XAMPP <a href="https://www.apachefriends.org">https://www.apachefriends.org</a> y descarga la versión que incluye PHP.</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Instalar XAMPP
+
+
+</span>
+</strong>
+
+Ejecuta el instalador y sigue las instrucciones. Asegúrate de seleccionar Apache y PHP durante la instalación.</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Iniciar los servicios
+
+
+</span>
+</strong>
+:
+Abre el panel de control de XAMPP y asegúrate de iniciar Apache.</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Comprobar instalación
+
+
+</span>
+</strong>
+
+Abre tu navegador y visita <code>http://localhost/</code>. Deberías ver la página de bienvenida de XAMPP.</p>
+<h3 id="creación-de-docker">Creación de docker</h3>
+<ul>
+<li>Es esta la solución que vamos a utilizar.</li>
+<li>Para ello crearemos un 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    docker-compose.yaml
+
+
+</span>
+</strong>
+, que nos levante un servicio con php y apache2.</li>
+<li>Por si queremos realizar modificaciones sobre la imagen original, la imagen la vamos a crear a patir de un 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Dockerfile
+
+
+</span>
+</strong>
+</li>
+<li>Cada proyecto que creemos o bien tendremos esta estructura, o bien los crearemos todos a partir de la carpeta compartida</li>
+</ul>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 240px">
+<img class="card-img-top" src="/certificado/php/es/docs/02_instalacion/docker_folder_hu7708736624956657042.png" width="230" height="87">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+</p>
+</figcaption>
+</figure>
+
+<hr style="border-color: red; border-width: 3px;"/>
+<p>El contenido de los ficheros:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></span><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>services:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#960050;background-color:#1e0010"></span>    web:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#960050;background-color:#1e0010"></span>        build : .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#960050;background-color:#1e0010"></span>        ports:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#960050;background-color:#1e0010"></span>            - 8800:80<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>        volumes:<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>            - ./../app:/var/www/html<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#960050;background-color:#1e0010"></span>        container_name: web</span></span></code></pre></td></tr></table>
+</div>
+</div>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Info</h4>
+
+    <ul>
+<li>Creamos el servicio (contenedor ) <em><strong>web</strong></em></li>
+<li>A partir del <strong>Dockerfile</strong> que tenemos en <strong>la misma carpeta</strong></li>
+<li>Proyectamos el puerto <strong>8800</strong> para acceder a él</li>
+<li>Mapeamos la carpeta <strong>./../app</strong> para escribir nuestros programas</li>
+</ul>
+
+
+</div>
+
+<p>El Dockerfile
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">FROM</span> <span style="color:#a6e22e">php</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8.3</span><span style="color:#f92672">-</span><span style="color:#a6e22e">apache</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ENV</span> <span style="color:#a6e22e">DEBIAN_FRONTEND</span><span style="color:#f92672">=</span><span style="color:#a6e22e">noninteractive</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">update</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Usa la imagen base de PHP con Apache
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Añadir o modificar la configuración de Apache para listar directorios si no hay index
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;Directory /var/www/html&gt;&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Options +Indexes&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;/Directory&gt;&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exponer el puerto 80
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">EXPOSE</span> <span style="color:#ae81ff">80</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>La imagen de la estructura la podríamos organizar de la siguiente manera
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 514px">
+<img class="card-img-top" src="/certificado/php/es/docs/02_instalacion/estructura_docker_hu13023925879229262445.png" width="504" height="297">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+</p>
+</figcaption>
+</figure>
+</p>
+<h3 id="temas-de-permisos-de-apache">Temas de permisos de <strong>Apache</strong></h3>
+<p>A pesar de que no somos administradores/as, debemos tener conocimientos sobre ciertos temas.<br>
+Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en el script a Apache que actúe sobre el sistema de ficheros, en última instancia, es el usuario <strong>apache</strong> quien ejecuta las acciones.</p>
+<p>Lee atentamente el siguiente cuadro y asegúrate de entender cada punto; si no, pregunta.</p>
+<h4 id="puntos-fundamentales-sobre-permisos">Puntos fundamentales sobre permisos</h4>
+<ol>
+<li>
+<p>En <strong>Linux</strong>, todo <strong>fichero</strong> tiene un <strong>propietario</strong>, y también todo <strong>proceso</strong> o <strong>aplicación</strong>, como lo es 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    el servidor web apache
+
+
+</span>
+</strong>
+.</p>
+<ul>
+<li>El <strong>propietario</strong> del proceso es el <strong>usuario que lanzó</strong> dicho proceso.</li>
+<li>Cuando un proceso quiere actuar sobre un fichero, el usuario que lo lanzó debe tener <strong>permisos sobre el fichero</strong>.</li>
+<li>El usuario que lanza el programa o servicio <strong>Apache</strong> es <strong>www-data</strong>.</li>
+<li>Para cambiar el propietario de un fichero o su grupo, usamos la siguiente sentencia:</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">chown</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">:</span><span style="color:#a6e22e">grupo</span> <span style="color:#a6e22e">fichero</span> (<span style="color:#f92672">-</span><span style="color:#a6e22e">R</span>)</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Nota</strong>: El parámetro <code>-R</code> es opcional y actúa de forma recursiva.</p>
+</li>
+<li>
+<p>En PHP, un <strong>directorio es igual que un fichero</strong> cuyo contenido son los ficheros y directorios que contiene.</p>
+</li>
+</ol>
+<h4 id="para-dar-permisos-sobre-un-fichero-a-un-usuario">Para dar permisos sobre un fichero a un usuario</h4>
+<p>Usamos la siguiente sentencia:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">chmod</span> <span style="color:#a6e22e">permisos</span> <span style="color:#a6e22e">fichero</span> (<span style="color:#f92672">-</span><span style="color:#a6e22e">R</span>)</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Nota</strong>:</p>
+<ul>
+<li><strong>permisos</strong> es un número de tres dígitos en <strong>octal</strong> (ver tabla abajo).</li>
+<li><strong>fichero</strong> es el archivo al cual queremos asignar permisos; se puede usar <code>*</code> para aplicar a todos.</li>
+<li><code>-R</code> es un parámetro opcional que actúa de forma recursiva.</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Número</th>
+          <th>Binario</th>
+          <th>Lectura (r)</th>
+          <th>Escritura (w)</th>
+          <th>Ejecución (x)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>000</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>001</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>✔️</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>010</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>011</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>✔️</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>100</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>101</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>✔️</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>110</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>111</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+      </tr>
+  </tbody>
+</table>
+<p>Por ejemplo:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">766</span> <span style="color:#a6e22e">file</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span>   <span style="color:#75715e"># Brinda acceso total al dueño, y lectura y escritura a los demás
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">770</span> <span style="color:#a6e22e">file</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span>   <span style="color:#75715e"># Brinda acceso total al dueño y al grupo, y elimina permisos a los demás
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">635</span> <span style="color:#a6e22e">file</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span>   <span style="color:#75715e"># Permite lectura y escritura al dueño, escritura y ejecución al grupo, y lectura y ejecución al resto
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p><strong>Nota</strong>: Recuerda que es el usuario <strong>apache</strong> quien debe tener los permisos necesarios (<strong>leer (r), escribir (w), ejecutar (x)</strong>).</p>
+</blockquote>
+<h4 id="establecer-propietaro-a-carpetas">Establecer propietaro a carpetas</h4>
+<p>El comando 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chown
+
+
+</span>
+</strong>
+ en Linux, permite 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    cambiar el propietario y el grupo de uno o varios archivos o directorios
+
+
+</span>
+</strong>
+.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex; background-color:#3c3d38"><span>    sudo chown usuario:grupo archivo_o_directorio</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Usuario
+
+
+</span>
+</strong>
+ se refiere al nuevo propietario del archivo o directorio.</li>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    grupo
+
+
+</span>
+</strong>
+ es el grupo al que se le asignarán los permisos sobre ese archivo o directorio.</li>
+<li>Al añadir el parámetro 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    -R
+
+
+</span>
+</strong>
+ al comando, 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chown
+
+
+</span>
+</strong>
+ aplica el cambio de propietario y grupo de manera recursiva, afectando todos los archivos y carpetas dentro del directorio especificado.</li>
+</ul>
+<p>Para el caso de servidores web, el directorio 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    /var/www/html
+
+
+</span>
+</strong>
+ es donde suelen almacenarse los archivos públicos del sitio (valor que contiene la directiva 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    DocumentRoot
+
+
+</span>
+</strong>
+ en la configuración del virtual host del servidor.</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    El propietario
+
+
+</span>
+</strong>
+ de este directorio debería ser 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    el usuario del sistema
+
+
+</span>
+</strong>
+ que necesita subir o modificar los archivos.</p>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    El grupo
+
+
+</span>
+</strong>
+ debería asignarse al usuario que ejecuta Apache 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    (generalmente <code>www-data</code>)
+
+
+</span>
+</strong>
+</p>
+<p>Esto permite que el sistema gestione los archivos correctamente</p>
+
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">Importante</h4>
+
+    <ul>
+<li>El usuario del sistema tiene permisos de escritura para crear, modificar o eliminar archivos según sea necesario.</li>
+<li>El grupo de Apache (<code>www-data</code>) puede acceder a los archivos para servirlos a través del servidor web.</li>
+</ul>
+
+
+</div>
+
+<p>Para establecer este tipo de permisos en <code>/var/www/html</code>, puedes ejecutar:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">chown</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">:</span><span style="color:#a6e22e">www</span><span style="color:#f92672">-</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">/</span><span style="color:#66d9ef">var</span><span style="color:#f92672">/</span><span style="color:#a6e22e">www</span><span style="color:#f92672">/</span><span style="color:#a6e22e">html</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">R</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Con esta configuración, los archivos se gestionarán con permisos de usuario para editar contenido y permisos de grupo para que Apache pueda acceder y servir el sitio web de manera segura.</p>
+
+  <div class="section-index">
+    
+    
+    </div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="manuelromeromiguel@gmail.com" aria-label="manuelromeromiguel@gmail.com">
+    <a target="_blank" rel="noopener" href="mailto:manuelromeromiguel@gmail.com" aria-label="manuelromeromiguel@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/MAlejandroR" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/certificado/php/js/main.min.b73d0a3ba40d27c2c2c8791ebca6b0781f2ce8b384b4f046da980d194f18e9a6.js" integrity="sha256-tz0KO6QNJ8LCyHkevKaweB8s6LOEtPBG2pgNGU8Y6aY=" crossorigin="anonymous"></script>
+<script defer src="/certificado/php/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/certificado/php/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
