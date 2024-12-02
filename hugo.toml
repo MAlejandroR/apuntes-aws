@@ -3,7 +3,7 @@ baseURL = 'https://web.infenlaces.com/php/'
 #baseURL = 'http://localhost:1313/'
 
 languageCode = 'es-es'
-title = 'Desarrollo de aplicaciones con tecnologías web" '
+title = 'Desarrollo Web en entorno servidor: PHP" '
 
 
 # Para poder cargar emogin https://www.webfx.com/tools/emoji-cheat-sheet/
