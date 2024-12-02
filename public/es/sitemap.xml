@@ -2,97 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/01_introduccion/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/01_introduccion/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/02_instalacion/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/02_instalacion/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/03_empezando/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/03_empezando/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/04_escribiendo/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/04_escribiendo/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/</loc>
     <lastmod>2024-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/05_declaraciones/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/05_declaraciones/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/06_control_selectivo/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/06_control_selectivo/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/07_control_repetitivo/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/07_control_repetitivo/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/08_expresiones/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/08_expresiones/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/11_funciones/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/11_funciones/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/11_funciones/pracitca/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/11_funciones/pracitca/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/12_formularios/</loc>
+    <loc>https://web.infenlaces.com/php/es/docs/20_ejercicios/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/docs/20_ejercicios/</loc>
-    <lastmod>2024-10-15T07:04:49+02:00</lastmod>
-  </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/</loc>
+    <loc>https://web.infenlaces.com/php/es/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://web.infenlaces.com/certificado/php/en/"
+                href="https://web.infenlaces.com/php/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://web.infenlaces.com/certificado/php/fr/"
+                href="https://web.infenlaces.com/php/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://web.infenlaces.com/certificado/php/es/"
+                href="https://web.infenlaces.com/php/es/"
                 />
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/categories/</loc>
+    <loc>https://web.infenlaces.com/php/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://web.infenlaces.com/certificado/php/en/categories/"
+                href="https://web.infenlaces.com/php/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://web.infenlaces.com/certificado/php/fr/categories/"
+                href="https://web.infenlaces.com/php/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://web.infenlaces.com/certificado/php/es/categories/"
+                href="https://web.infenlaces.com/php/es/categories/"
                 />
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/search/</loc>
+    <loc>https://web.infenlaces.com/php/es/search/</loc>
   </url><url>
-    <loc>https://web.infenlaces.com/certificado/php/es/tags/</loc>
+    <loc>https://web.infenlaces.com/php/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://web.infenlaces.com/certificado/php/en/tags/"
+                href="https://web.infenlaces.com/php/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://web.infenlaces.com/certificado/php/fr/tags/"
+                href="https://web.infenlaces.com/php/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://web.infenlaces.com/certificado/php/es/tags/"
+                href="https://web.infenlaces.com/php/es/tags/"
                 />
   </url>
 </urlset>
