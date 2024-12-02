@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/php/en/categories/</loc>
+    <loc>https://web.infenlaces.com/php/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/php/es/categories/"
+                href="https://web.infenlaces.com/php/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/php/fr/categories/"
+                href="https://web.infenlaces.com/php/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/php/en/categories/"
+                href="https://web.infenlaces.com/php/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/php/en/</loc>
+    <loc>https://web.infenlaces.com/php/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/php/es/"
+                href="https://web.infenlaces.com/php/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/php/fr/"
+                href="https://web.infenlaces.com/php/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/php/en/"
+                href="https://web.infenlaces.com/php/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/php/en/tags/</loc>
+    <loc>https://web.infenlaces.com/php/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:1313/php/es/tags/"
+                href="https://web.infenlaces.com/php/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/php/fr/tags/"
+                href="https://web.infenlaces.com/php/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/php/en/tags/"
+                href="https://web.infenlaces.com/php/en/tags/"
                 />
   </url>
 </urlset>
