@@ -6,7 +6,7 @@ icon = "fas fa-download"
 weight = 20
 +++
 
-### Instalando en Ubuntu
+## Instalando en Ubuntu
 
 * En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos:
 
@@ -27,7 +27,7 @@ sudo systemctl restart apache2
 
 {{< / highlight >}}
 
-### Instalando en Windows con XAMPP
+## Instalando en Windows con XAMPP
 
 XAMPP es una solución sencilla para tener Apache, PHP, y MySQL en Windows. Sigue estos pasos para instalarlo:
 
@@ -43,7 +43,7 @@ Abre el panel de control de XAMPP y asegúrate de iniciar Apache.
 {{< color >}}Comprobar instalación{{< /color >}}
 Abre tu navegador y visita `http://localhost/`. Deberías ver la página de bienvenida de XAMPP.
 
-### Creación de docker 
+## Creación de docker 
 
 * Es esta la solución que vamos a utilizar.
 * Para ello crearemos un {{< color >}} docker-compose.yaml {{< /color >}}, que nos levante un servicio con php y apache2.
@@ -78,17 +78,17 @@ services:
 
 El Dockerfile 
 {{< highlight php "linenos=table, hl_lines=1" >}}
+#Usa la imagen base de PHP con Apache
 FROM php:8.3-apache
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
-# Usa la imagen base de PHP con Apache
-
-# Añadir o modificar la configuración de Apache para listar directorios si no hay index
+***Añadir o modificar la configuración de Apache para listar directorios si no hay index***
 RUN echo '<Directory /var/www/html>' >> /etc/apache2/apache2.conf
 RUN echo 'Options +Indexes' >> /etc/apache2/apache2.conf
 RUN echo '</Directory>' >> /etc/apache2/apache2.conf
 
-# Exponer el puerto 80
+
+# Exponer el puerto 80 Algo recomendado, aunque no nodecesrio
 EXPOSE 80
 {{< / highlight >}}
 
@@ -96,6 +96,106 @@ La imagen de la estructura la podríamos organizar de la siguiente manera
 {{< imgproc estructura_docker Fill "504x297" >}}
 
 {{< /imgproc >}}
+# Instalación de PhpStorm
+
+Vamos a usar esta herramienta y se os facilitarán claves para acceder. Puedes descargarla desde el sitio oficial:
+
+{{<referencias title="PhpStorm - Descargas oficiales" subtitle="Enlaces para Windows y Linux" icon-image="inter.gif">}}
+https://www.jetbrains.com/es-es/phpstorm/download/
+{{</referencias>}}
+
+{{<alert title="Nota Importante" color="yellow">}}
+Debemos registrarnos en JetBrains con una cuenta de Gmail. Inicialmente, podemos usar el acceso gratuito de 30 días.
+{{</alert>}}
+
+## Instalación  de phpstorm
+{{<definicion title="¿Qué es PhpStorm?" icon="icon-code">}}
+PhpStorm es un entorno de desarrollo integrado (IDE) diseñado específicamente para el desarrollo en PHP. Ofrece herramientas avanzadas como depuración, soporte para frameworks, integración con control de versiones y edición de HTML, CSS y JavaScript, todo en una interfaz intuitiva.
+{{</definicion>}}
+
+### Instalación en ubuntu
+
+{{<color>}}PhpStorm se puede instalar fácilmente en sistemas Ubuntu utilizando Snap.{{< /color>}} Snap es un sistema de paquetes que resuelve problemas de dependencias y simplifica las instalaciones en Ubuntu (introducido desde la versión 16.04).
+
+{{% line %}}
+
+{{< color >}} Instalación mediante Snap {{< /color >}}
+
+1. Asegúrate de tener Snap habilitado. Para más información sobre Snap, consulta:
+   {{<referencias title="Snap en Ubuntu" subtitle="Guía básica" >}}
+   https://blogubuntu.com/que-es-ubuntu-snap
+   {{</referencias>}}
+
+2. Ejecuta el siguiente comando para instalar PhpStorm:
+   {{< highlight dockerfile "linenos=table, hl_lines=1" >}}
+   sudo snap install phpstorm --classic
+   {{< /highlight >}}
+
+{{< color >}} Instalación manual {{< /color >}}
+
+Si prefieres instalar PhpStorm manualmente:
+
+1. Descarga el archivo desde el sitio oficial:
+   {{< highlight dockerfile "linenos=table" >}}
+   wget https://download.jetbrains.com/webide/PhpStorm-2020.2.2.tar.gz
+   {{< /highlight >}}
+
+2. Extrae el contenido en el directorio recomendado `/opt`:
+   {{< highlight dockerfile "linenos=table" >}}
+   sudo tar xvfz PhpStorm-2020.2.2.tar.gz -C /opt/
+   {{< /highlight >}}
+   {{<definicion title="Parámetros del comando tar" icon="icon-tar">}}
+    - **x**: Extraer archivos.
+    - **f**: Utilizar un archivo.
+    - **z**: Operar sobre un archivo comprimido gzip.
+    - **v**: Mostrar las acciones de forma detallada (verbose).
+      {{</definicion>}}
+
+3. Cambia al directorio de instalación y ejecuta el script:
+   {{< highlight dockerfile "linenos=table" >}}
+   cd /opt/PhpStorm-181.5281.19/bin
+   ./phpstorm.sh
+   {{< /highlight >}}
+
+#### Instalación en Windows
+
+1. Visita la página de descarga:
+   {{<referencias title="Descarga de PhpStorm para Windows" subtitle="Instalación guiada" >}}
+   https://www.jetbrains.com/es-es/phpstorm/download/#section=windows
+   {{</referencias>}}
+
+2. Descarga y ejecuta el instalador siguiendo los pasos indicados.
+
+{{% line %}}
+
+#### Activar la licencia de phpstorm a través del instituto
+
+Abrimos el {{<color>}}IDE PhpStorm{{< /color>}}. Si es la primera vez, se nos pedirá que aportemos la licencia o que iniciemos la versión gratuita de 30 días. Si ya hemos iniciado previamente, podemos acceder al registro desde el menú **Help**.
+{{< imgproc permisos1 Fill "400x450" >}}
+
+{{< /imgproc >}}
+1. Se visualizará una página para activar la licencia.
+2. Seleccionamos la opción de activación mediante servidor de licencias.
+{{< imgproc permisos2 Fill "400x450" >}}
+
+{{< /imgproc >}} 
+3. Establecemos la siguiente URL del servidor:  
+   {{< highlight dockerfile "linenos=table, hl_lines=1" >}}
+   https://cpilosenlaces.fls.jetbrains.com
+   {{< /highlight >}}
+
+4. Finalmente, presionamos la opción **Activate** para completar el proceso.
+
+{{<desplegable title="¿Por qué usar Snap para instalar PhpStorm?">}}
+{{< imgproc snap Fill "400x450" >}}
+Snap resuelve problemas de dependencias y ofrece una instalación rápida y segura, ideal para mantener PhpStorm actualizado automáticamente.
+{{< /imgproc >}}
+{{</desplegable>}}
+
+{{<alert title="Nota adicional" color="blue">}}
+Si tienes alguna duda, consulta la sección de preguntas frecuentes de JetBrains o contacta al soporte.
+{{</alert>}}
+
 
 ### Temas de permisos de **Apache**
 

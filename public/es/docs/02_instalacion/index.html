@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head>
+  <head><script src="/php/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=php/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/php/es/docs/02_instalacion/index.xml">
-<link rel="alternate" type="text/html" href="https://web.infenlaces.com/php/es/docs/02_instalacion/_print/">
-<meta name="robots" content="index, follow">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/php/es/docs/02_instalacion/index.xml">
+<link rel="alternate" type="text/html" href="http://localhost:1313/php/es/docs/02_instalacion/_print/">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/php/favicons/favicon.ico" >
@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" href="/php/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/php/favicons/android-192x192.png" sizes="192x192">
 
-<title>Instalación | Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web</title>
+<title>Instalación | Desarrollo Web en Entorno Servidor</title>
 <meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
 
-<meta property="og:url" content="https://web.infenlaces.com/php/es/docs/02_instalacion/">
-  <meta property="og:site_name" content="Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web">
+<meta property="og:url" content="http://localhost:1313/php/es/docs/02_instalacion/">
+  <meta property="og:site_name" content="Desarrollo Web en Entorno Servidor">
   <meta property="og:title" content="Instalación">
   <meta property="og:description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
   <meta property="og:locale" content="es">
@@ -33,13 +33,13 @@
   <meta itemprop="description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="968">
+  <meta itemprop="wordCount" content="1362">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Instalación">
   <meta name="twitter:description" content="Instalando en Ubuntu En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos: Actualizar los repositorios: 1 2 3 4 5 6 #Actualizar repositorios sudo apt update #Instalar Apache2 sudo apt install apache2 #Instalar php y el módulo de php para apache sudo apt install php libapache2-mod-php Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en funcionamiento 1 sudo systemctl restart apache2">
 
 
-<link rel="preload" href="/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" as="style"><link href="/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" rel="stylesheet">
+<link href="/php/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -52,7 +52,7 @@
 <div class="container-fluid flex-column flex-md-row ">
   <a class="navbar-brand" href="/php/es/"><span class="navbar-brand__logo navbar-logo">
     <img src="/php/images/logo.png" alt="Logo" width="150" height="auto" />
-    </span><span class="navbar-brand__name">Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web</span></a>
+    </span><span class="navbar-brand__name">Desarrollo Web en Entorno Servidor</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item dropdown d-none d-lg-block">
@@ -211,11 +211,15 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#instalando-en-ubuntu">Instalando en Ubuntu</a></li>
+    <li><a href="#instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</a></li>
+    <li><a href="#creación-de-docker">Creación de docker</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#instalación--de-phpstorm">Instalación  de phpstorm</a>
       <ul>
-        <li><a href="#instalando-en-ubuntu">Instalando en Ubuntu</a></li>
-        <li><a href="#instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</a></li>
-        <li><a href="#creación-de-docker">Creación de docker</a></li>
+        <li><a href="#instalación-en-ubuntu">Instalación en ubuntu</a></li>
         <li><a href="#temas-de-permisos-de-apache">Temas de permisos de <strong>Apache</strong></a></li>
       </ul>
     </li>
@@ -245,7 +249,7 @@
 	<header class="article-meta">
 		
 </header>
-	<h3 id="instalando-en-ubuntu">Instalando en Ubuntu</h3>
+	<h2 id="instalando-en-ubuntu">Instalando en Ubuntu</h2>
 <ul>
 <li>En un sistema Ubuntu, puedes instalar Apache y PHP utilizando los siguientes comandos:</li>
 </ul>
@@ -286,7 +290,7 @@ Depué de realizar estas tareas, debes de resetear apache para ponerlo todo en f
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">restart</span> <span style="color:#a6e22e">apache2</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
-<h3 id="instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</h3>
+<h2 id="instalando-en-windows-con-xampp">Instalando en Windows con XAMPP</h2>
 <p>XAMPP es una solución sencilla para tener Apache, PHP, y MySQL en Windows. Sigue estos pasos para instalarlo:</p>
 <p>
 <strong>
@@ -332,7 +336,7 @@ Abre el panel de control de XAMPP y asegúrate de iniciar Apache.</p>
 </strong>
 
 Abre tu navegador y visita <code>http://localhost/</code>. Deberías ver la página de bienvenida de XAMPP.</p>
-<h3 id="creación-de-docker">Creación de docker</h3>
+<h2 id="creación-de-docker">Creación de docker</h2>
 <ul>
 <li>Es esta la solución que vamos a utilizar.</li>
 <li>Para ello crearemos un 
@@ -425,17 +429,17 @@ Abre tu navegador y visita <code>http://localhost/</code>. Deberías ver la pág
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">FROM</span> <span style="color:#a6e22e">php</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8.3</span><span style="color:#f92672">-</span><span style="color:#a6e22e">apache</span>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#75715e">#Usa la imagen base de PHP con Apache
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">FROM</span> <span style="color:#a6e22e">php</span><span style="color:#f92672">:</span><span style="color:#ae81ff">8.3</span><span style="color:#f92672">-</span><span style="color:#a6e22e">apache</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">ENV</span> <span style="color:#a6e22e">DEBIAN_FRONTEND</span><span style="color:#f92672">=</span><span style="color:#a6e22e">noninteractive</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">update</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Usa la imagen base de PHP con Apache
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Añadir o modificar la configuración de Apache para listar directorios si no hay index
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;Directory /var/www/html&gt;&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">***</span><span style="color:#a6e22e">Añadir</span> <span style="color:#a6e22e">o</span> <span style="color:#a6e22e">modificar</span> <span style="color:#a6e22e">la</span> <span style="color:#a6e22e">configuración</span> <span style="color:#a6e22e">de</span> <span style="color:#a6e22e">Apache</span> <span style="color:#a6e22e">para</span> <span style="color:#a6e22e">listar</span> <span style="color:#a6e22e">directorios</span> <span style="color:#a6e22e">si</span> <span style="color:#a6e22e">no</span> <span style="color:#a6e22e">hay</span> <span style="color:#a6e22e">index</span><span style="color:#f92672">***</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;Directory /var/www/html&gt;&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Options +Indexes&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">RUN</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;/Directory&gt;&#39;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">etc</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">/</span><span style="color:#a6e22e">apache2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exponer el puerto 80
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exponer el puerto 80 Algo recomendado, aunque no nodecesrio
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">EXPOSE</span> <span style="color:#ae81ff">80</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
@@ -452,6 +456,342 @@ Abre tu navegador y visita <code>http://localhost/</code>. Deberías ver la pág
 </figcaption>
 </figure>
 </p>
+<h1 id="instalación-de-phpstorm">Instalación de PhpStorm</h1>
+<p>Vamos a usar esta herramienta y se os facilitarán claves para acceder. Puedes descargarla desde el sitio oficial:</p>
+
+
+
+
+<div style="border: 1px solid navy; border-radius: 5px; overflow: hidden;">
+    <div style="background-color: navy; color: white;
+    font-weight: bold; padding: 10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            
+                <i class="fas fa-book"></i> 
+            
+        </span>
+        
+        <span>PhpStorm - Descargas oficiales</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight: bold; color: navy;">Fuentes de Información</h3>
+
+    <hr style="border-color: lightblue; border-width: 3px"/>
+    
+    <div style="background-color: #e0f7fa; color: navy; padding: 10px;">
+        <ul>
+            
+            <li><a href="https://www.jetbrains.com/es-es/phpstorm/download/">https://www.jetbrains.com/es-es/phpstorm/download/</a></li>
+            
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="alert alert-yellow" role="alert">
+<h4 class="alert-heading">Nota Importante</h4>
+
+    Debemos registrarnos en JetBrains con una cuenta de Gmail. Inicialmente, podemos usar el acceso gratuito de 30 días.
+
+</div>
+
+<h2 id="instalación--de-phpstorm">Instalación  de phpstorm</h2>
+<div class="definicion-concepto">
+  <div class="definicion-titulo">
+    
+    <i class="icon-code" aria-hidden="true"></i>
+    
+    <strong>¿Qué es PhpStorm?</strong>
+  </div>
+  <div class="definicion-contenido">
+    
+PhpStorm es un entorno de desarrollo integrado (IDE) diseñado específicamente para el desarrollo en PHP. Ofrece herramientas avanzadas como depuración, soporte para frameworks, integración con control de versiones y edición de HTML, CSS y JavaScript, todo en una interfaz intuitiva.
+
+  </div>
+</div>
+<h3 id="instalación-en-ubuntu">Instalación en ubuntu</h3>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    PhpStorm se puede instalar fácilmente en sistemas Ubuntu utilizando Snap.
+
+
+</span>
+</strong>
+ Snap es un sistema de paquetes que resuelve problemas de dependencias y simplifica las instalaciones en Ubuntu (introducido desde la versión 16.04).</p>
+<hr style="border-color: red; border-width: 3px;"/>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Instalación mediante Snap
+
+
+</span>
+</strong>
+
+<ol>
+<li>
+<p>Asegúrate de tener Snap habilitado. Para más información sobre Snap, consulta:
+
+
+
+
+<div style="border: 1px solid navy; border-radius: 5px; overflow: hidden;">
+    <div style="background-color: navy; color: white;
+    font-weight: bold; padding: 10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            
+                <i class="fas fa-book"></i> 
+            
+        </span>
+        
+        <span>Snap en Ubuntu</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight: bold; color: navy;">Fuentes de Información</h3>
+
+    <hr style="border-color: lightblue; border-width: 3px"/>
+    
+    <div style="background-color: #e0f7fa; color: navy; padding: 10px;">
+        <ul>
+            
+            <li><a href="https://blogubuntu.com/que-es-ubuntu-snap">https://blogubuntu.com/que-es-ubuntu-snap</a></li>
+            
+            <li></li>
+            
+            
+        </ul>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>Ejecuta el siguiente comando para instalar PhpStorm:
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex; background-color:#3c3d38"><span>sudo snap install phpstorm --classic</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
+</ol>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Instalación manual
+
+
+</span>
+</strong>
+
+<p>Si prefieres instalar PhpStorm manualmente:</p>
+<ol>
+<li>
+<p>Descarga el archivo desde el sitio oficial:
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span>wget https://download.jetbrains.com/webide/PhpStorm-2020.2.2.tar.gz</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
+<li>
+<p>Extrae el contenido en el directorio recomendado <code>/opt</code>:
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span>sudo tar xvfz PhpStorm-2020.2.2.tar.gz -C /opt/</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<div class="definicion-concepto">
+  <div class="definicion-titulo">
+    
+    <i class="icon-tar" aria-hidden="true"></i>
+    
+    <strong>Parámetros del comando tar</strong>
+  </div>
+  <div class="definicion-contenido">
+    
+    - **x**: Extraer archivos.
+    - **f**: Utilizar un archivo.
+    - **z**: Operar sobre un archivo comprimido gzip.
+    - **v**: Mostrar las acciones de forma detallada (verbose).
+      
+  </div>
+</div></p>
+</li>
+<li>
+<p>Cambia al directorio de instalación y ejecuta el script:
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span>cd /opt/PhpStorm-181.5281.19/bin<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>./phpstorm.sh</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
+</ol>
+<h4 id="instalación-en-windows">Instalación en Windows</h4>
+<ol>
+<li>
+<p>Visita la página de descarga:
+
+
+
+
+<div style="border: 1px solid navy; border-radius: 5px; overflow: hidden;">
+    <div style="background-color: navy; color: white;
+    font-weight: bold; padding: 10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            
+                <i class="fas fa-book"></i> 
+            
+        </span>
+        
+        <span>Descarga de PhpStorm para Windows</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight: bold; color: navy;">Fuentes de Información</h3>
+
+    <hr style="border-color: lightblue; border-width: 3px"/>
+    
+    <div style="background-color: #e0f7fa; color: navy; padding: 10px;">
+        <ul>
+            
+            <li><a href="https://www.jetbrains.com/es-es/phpstorm/download/#section=windows">https://www.jetbrains.com/es-es/phpstorm/download/#section=windows</a></li>
+            
+            <li></li>
+            
+            
+        </ul>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>Descarga y ejecuta el instalador siguiendo los pasos indicados.</p>
+</li>
+</ol>
+<hr style="border-color: red; border-width: 3px;"/>
+<h4 id="activar-la-licencia-de-phpstorm-a-través-del-instituto">Activar la licencia de phpstorm a través del instituto</h4>
+<p>Abrimos el 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    IDE PhpStorm
+
+
+</span>
+</strong>
+. Si es la primera vez, se nos pedirá que aportemos la licencia o que iniciemos la versión gratuita de 30 días. Si ya hemos iniciado previamente, podemos acceder al registro desde el menú <strong>Help</strong>.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
+<img class="card-img-top" src="/php/es/docs/02_instalacion/permisos1_hu9144385526659144830.png" width="400" height="450">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+</p>
+</figcaption>
+</figure>
+</p>
+<ol>
+<li>
+<p>Se visualizará una página para activar la licencia.</p>
+</li>
+<li>
+<p>Seleccionamos la opción de activación mediante servidor de licencias.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
+<img class="card-img-top" src="/php/es/docs/02_instalacion/permisos2_hu8050439311183426545.png" width="400" height="450">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+</p>
+</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>Establecemos la siguiente URL del servidor:<br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex; background-color:#3c3d38"><span>https://cpilosenlaces.fls.jetbrains.com</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+</li>
+<li>
+<p>Finalmente, presionamos la opción <strong>Activate</strong> para completar el proceso.</p>
+</li>
+</ol>
+<details>
+    <summary>¿Por qué usar Snap para instalar PhpStorm?</summary>
+    <div class="solution-content">
+        
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 410px">
+<img class="card-img-top" src="/php/es/docs/02_instalacion/snap_hu11000031882281315526.png" width="400" height="450">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Snap resuelve problemas de dependencias y ofrece una instalación rápida y segura, ideal para mantener PhpStorm actualizado automáticamente.
+
+</p>
+</figcaption>
+</figure>
+
+
+    </div>
+</details>
+
+<style>
+    .solution-content {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 5px;
+        background-color: #f9f9f9;
+    }
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: #0073e6;
+    }
+</style>
+
+
+
+<div class="alert alert-blue" role="alert">
+<h4 class="alert-heading">Nota adicional</h4>
+
+    Si tienes alguna duda, consulta la sección de preguntas frecuentes de JetBrains o contacta al soporte.
+
+</div>
+
 <h3 id="temas-de-permisos-de-apache">Temas de permisos de <strong>Apache</strong></h3>
 <p>A pesar de que no somos administradores/as, debemos tener conocimientos sobre ciertos temas.<br>
 Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en el script a Apache que actúe sobre el sistema de ficheros, en última instancia, es el usuario <strong>apache</strong> quien ejecuta las acciones.</p>
@@ -783,8 +1123,8 @@ Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en
 </footer>
 
     </div>
-    <script src="/php/js/main.min.6cb1f0587ffe05dc46abdc842cf597b013c8fb6b6f24b6bdeac8a41f17ce5957.js" integrity="sha256-bLHwWH/&#43;BdxGq9yELPWXsBPI&#43;2tvJLa96sikHxfOWVc=" crossorigin="anonymous"></script>
-<script defer src="/php/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+    <script src="/php/js/main.js"></script>
+<script defer src="/php/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/php/js/tabpane-persist.js'></script>
 
   </body>

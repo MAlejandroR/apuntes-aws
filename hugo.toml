@@ -76,7 +76,7 @@ languageName = "English"
 contentDir = "content/en"
 
 [languages.es]
-title = "Certificado de profesionalidad Desarrollo de aplicaciones con tecnologías web"
+title = "Desarrollo Web en Entorno Servidor"
 languageName = "Español"
 contentDir = "content/es"
 
