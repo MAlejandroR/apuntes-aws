@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head><script src="/aws/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws/livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/aws/es/docs/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/aws/es/docs/index.xml">
+<link rel="canonical" type="text/html" href="https://web.infenlaces.com/aws/es/docs/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/docs/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -23,27 +23,27 @@
 <meta name="description" content="Realizar prácticas de laboratorio
 ">
 
-<meta property="og:url" content="http://localhost:1313/aws/es/docs/">
+<meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
   <meta property="og:title" content="Laboratorio de Prácticas ">
   <meta property="og:description" content="Realizar prácticas de laboratorio">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="http://localhost:1313/aws/es/docs/featured-background.png">
+    <meta property="og:image" content="https://web.infenlaces.com/aws/es/docs/featured-background.png">
 
   <meta itemprop="name" content="Laboratorio de Prácticas ">
   <meta itemprop="description" content="Realizar prácticas de laboratorio">
   <meta itemprop="datePublished" content="2024-09-15T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-09-15T00:00:00+00:00">
   <meta itemprop="wordCount" content="115">
-  <meta itemprop="image" content="http://localhost:1313/aws/es/docs/featured-background.png">
+  <meta itemprop="image" content="https://web.infenlaces.com/aws/es/docs/featured-background.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/aws/es/docs/featured-background.png">
+  <meta name="twitter:image" content="https://web.infenlaces.com/aws/es/docs/featured-background.png">
   <meta name="twitter:title" content="Laboratorio de Prácticas ">
   <meta name="twitter:description" content="Realizar prácticas de laboratorio">
 
 
-<link href="/aws/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" as="style"><link href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -63,8 +63,8 @@
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     <li><a class="dropdown-item" href="/aws/en/">English</a></li>
+    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     </ul>
 </div></li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -253,6 +253,25 @@ Versión imprimible multipagina.
   
 
   
+    
+    
+	
+<li>4.1: <a href="#pg-b32f00d066cb0754645b9ece11a2ecd5">Acceso a RDS</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
     
@@ -420,7 +439,7 @@ Versión imprimible multipagina.
     
 	<h1 id="pg-63a2b35a01ed2311b6f3990008464e1a">1 - Acceso a Learner Lab</h1>
     <div class="lead">Cómo acceder a learner lab</div>
-	<h2 id="hahahugoshortcode8s0hbhb">
+	<h2 id="hahahugoshortcode10s0hbhb">
 
 
 
@@ -1738,6 +1757,9 @@ En el proceso de instalación y verificación se ha detectado un problema con Co
 <p>Otro problema detectado, es que cuando ejectuamos las migraciones en laravel usando sqlite, si no existe el fichero que almacena los datos, laravel, de forma interactiva, nos pide confirmación para crearlo.
 Como aquí no vamos a poder interactuar con el script, creamos previamente el fichero con el comando <strong>touch</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>touch database/database.sqlite</span></span></code></pre></div>
+<p>Igualemnte cuando está, como es el caso, en modo producción, pide confirmación para ejecutar las migraciones, tomando por defecto el valor no</p>
+<p>Una opción es forzar la migración sin pedir confirmación</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>php artisan migrate --seed --force</span></span></code></pre></div>
 <p>Con todo esto empezamos a reescribir todas las acciones</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/bin/bash
 </span></span></span><span style="display:flex;"><span>
@@ -1781,7 +1803,7 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>npm install
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>npm run build
 </span></span><span style="display:flex;"><span>touch database/database.sqlite
-</span></span><span style="display:flex;"><span>php artisan migrate --seed
+</span></span><span style="display:flex;"><span>php artisan migrate --seed --force
 </span></span><span style="display:flex;"><span>php artisan storage:link
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
@@ -1789,10 +1811,12 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo chown -R ubuntu:www-data /var/www/html/laravel_aws
 </span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/storage -R
-</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/bootstrap/cache -R
 </span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/database/database.sqlite -R
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># Para las sesiones necesitamos permisos explícitos para www-data</span>
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/www/html/laravel_aws/storage bootstrap/cache
+</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#666">775</span> storage /var/www/html/laravel_aws/bootstrap/cache
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
@@ -1803,8 +1827,8 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 </span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        &lt;Directory /var/www/html/laravel_aws/public&gt;
 </span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            AllowOverride All
 </span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            Require all granted
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        &lt;/Directory&gt;
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            ErrorLog \${APACHE_LOG_DIR}/error.log
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">        &lt;/Directory&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">            ErrorLog \${APACHE_LOG_DIR}/error.log
 </span></span></span><span style="display:flex;"><span><span style="color:#b44">            CustomLog \${APACHE_LOG_DIR}/access.log combined
 </span></span></span><span style="display:flex;"><span><span style="color:#b44">    &lt;/VirtualHost&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#b44">EOF</span>
@@ -1936,19 +1960,8 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 <p>Accederemos al <strong>panel de control (dashboard)</strong> del servicio.</p>
 <hr>
 <h2 id="crear-una-base-de-datos">Crear una base de datos</h2>
-<p>En el menú lateral, seleccionamos <strong>Bases de datos</strong> y pulsamos el botón <strong>Crear base de datos</strong>.</p>
-<h2 id="hahahugoshortcode14s3hbhb">
-
-
-<hr style="border: none; border-top: 5px solid green;">
-
-<img src="/aws/es/docs/03_rds/img_1.png" alt="Crear base de datos">
-
-
-
-<hr style="border: none; border-top: 5px solid green;">
-</h2>
-<h2 id="crear-una-base-de-datos-1">Crear una base de datos</h2>
+<p>Tenemos diferentes tipos de bases de datos.</p>
+<p>Vamos a trabajar con bases de datos relacionales que son las que manejamos habitualmente</p>
 <p>En el menú lateral, seleccionamos <strong>Bases de datos</strong> y pulsamos el botón <strong>Crear base de datos</strong>.</p>
 <p>
 
@@ -1961,32 +1974,129 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 
 <hr style="border: none; border-top: 5px solid green;">
 </p>
-<p>Seleccionamos la opción Base de datos y apretamos el botón <strong>crear base de datos</strong>
+<p>Seleccionamos la opción Base de datos y apretamos el botón <strong>crear base de datos</strong> seleccinando <strong>configuración completa</strong>
 
 
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/aws/es/docs/03_rds/img_1.png" alt="img_1.png"><br>
+<img src="/aws/es/docs/03_rds/img_2.png" alt="img_2.png"><br>
 
 
 
 <hr style="border: none; border-top: 5px solid green;">
 </p>
-<p>Seleciconamos <strong>la configuración completa</strong></p>
+<h3 id="configuración-del-servicio">Configuración del servicio</h3>
 <p>Ahora vamos a ir viendo y entendiendo las diferentes opciones que se presentas</p>
+<p>A diferencia de las instancias EC2 dónde selecinamos un AMI, aquí seleccionamos el motor de la base de datos que vamos a utilizar.
+Lo primero seleccionamos lo que se llama el <strong>sabor</strong> o el motor de la base de datos que queremos utilizar</p>
+<p>En nuestro caso seleccionaremos <strong>MySQL</strong>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_3.png" alt="img_3.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
 
 <strong>
 <span class="font-weight-bold text-primary">
 
-    EL motor de la bd
+    Opciones de configuración
 
 
 </span>
 </strong>
 
-<p>A diferencia de las instancias EC2 dónde selecinamos un AMI, aquí seleccionamos el maotor de la base de datos que vamos a utilizar.</p>
-<p>En nuestro caso seleccionaremos <strong>MySQL</strong></p>
+<p>Seleccionamos en la siguiente opción una configuracion completa y en modo de pruebas y así veremos diferentes opciones.
+Seleccionamos modo de de pruebas, que implica que no habrá replicacion y por lo tanto será mucho más económico (se puede ver gráficamente en la imagen que le acompaña)
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_4.png" alt="img_4.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Usario y contraseña
+
+
+</span>
+</strong>
+
+<p>Las siguientes opciones son muy importantes, ya que van a permitir acceder a la base de datos.</p>
+<p>En ella especificaremos el usuario, que por defecto indican <strong>admin</strong> y la password, dándonos diferentes opciones para generarla</p>
+<p>En nuestro caso vamos a poner <strong>12345678</strong> por comodidad y ya que la base de datos no se va a quedar en ejecución mucho tiempo (es una práctica de laboratorio)
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_5.png" alt="img_5.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>No es lo más habitual, pero ahora vamos a dar acceso públic a esta base de datos para poder acceder a ella</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_9.png" alt="img_9.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+El resto de opciones las dejamos por defecto y vamos a <strong>Configuración adicional</strong>  donde podemos seleccionar el nombre de la base de datos
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_6.png" alt="img_6.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Ya podemos dar a crear <strong>la base de datos</strong>, acción que puede tardar entre 2 y 4 minutos
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_7.png" alt="img_7.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Vemos que la instancia se está creando
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/img_8.png" alt="img_8.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
 
 </div>
 
@@ -2002,6 +2112,37 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
   
   
 
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b32f00d066cb0754645b9ece11a2ecd5">4.1 - Acceso a RDS</h1>
+    <div class="lead">Acceder a la bd</div>
+	<h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
+<p>Lo primero que necesitamos el el punto de acceso</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
   
 
     
@@ -2046,8 +2187,8 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 
     </div>
     <script src='/aws/js/deflate.js'></script>
-<script src="/aws/js/main.js"></script>
-<script defer src="/aws/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src="/aws/js/main.min.6205de85bc0525b82a15bfb0ab283083c0fa3467be5e2e03a9774de81b5662a2.js" integrity="sha256-YgXehbwFJbgqFb&#43;wqygwg8D6NGe&#43;Xi4DqXdN6BtWYqI=" crossorigin="anonymous"></script>
+<script defer src="/aws/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/aws/js/tabpane-persist.js'></script>
 
   </body>

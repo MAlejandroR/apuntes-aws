@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docsy</title>
-    <link>http://localhost:1313/aws/fr/</link>
+    <link>https://web.infenlaces.com/aws/fr/</link>
     <description>Recent content on Docsy</description>
     <generator>Hugo</generator>
     <language>fr</language>
-    <atom:link href="http://localhost:1313/aws/fr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://web.infenlaces.com/aws/fr/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

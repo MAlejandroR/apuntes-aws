@@ -2,76 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/aws/es/</loc>
+    <loc>https://web.infenlaces.com/aws/es/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/aws/fr/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/aws/en/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="http://localhost:1313/aws/es/"
+                href="https://web.infenlaces.com/aws/es/"
                 />
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/00_acceso_curso_lab/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/00_acceso_curso_lab/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/01_ec2/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/01_ec2/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/01_ec2/configurar/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/01_ec2/configurar/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/01_ec2_bash/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/01_ec2_bash/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/03_rds/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/03_rds/acceder/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/docs/</loc>
+    <loc>https://web.infenlaces.com/aws/es/docs/03_rds/</loc>
+    <lastmod>2024-10-15T07:04:49+02:00</lastmod>
+  </url><url>
+    <loc>https://web.infenlaces.com/aws/es/docs/</loc>
     <lastmod>2024-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/aws/es/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/aws/fr/categories/"
-                />
+    <loc>https://web.infenlaces.com/aws/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/aws/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="http://localhost:1313/aws/es/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/aws/es/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/aws/es/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/aws/en/tags/"
+                href="https://web.infenlaces.com/aws/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:1313/aws/fr/tags/"
+                href="https://web.infenlaces.com/aws/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="http://localhost:1313/aws/es/tags/"
+                href="https://web.infenlaces.com/aws/es/categories/"
+                />
+  </url><url>
+    <loc>https://web.infenlaces.com/aws/es/search/</loc>
+  </url><url>
+    <loc>https://web.infenlaces.com/aws/es/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://web.infenlaces.com/aws/es/tags/"
                 />
   </url>
 </urlset>

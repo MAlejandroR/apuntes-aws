@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Acceso a Learner Lab on Máster de Desarrollo Web</title>
-    <link>http://localhost:1313/aws/es/docs/00_acceso_curso_lab/</link>
+    <link>https://web.infenlaces.com/aws/es/docs/00_acceso_curso_lab/</link>
     <description>Recent content in Acceso a Learner Lab on Máster de Desarrollo Web</description>
     <generator>Hugo</generator>
     <language>es-es</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/aws/es/docs/00_acceso_curso_lab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://web.infenlaces.com/aws/es/docs/00_acceso_curso_lab/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
