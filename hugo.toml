@@ -1,9 +1,9 @@
 #baseURL = 'http://proyectosdwa.es/manuel'
-baseURL = 'https://web.infenlaces.com/php/'
+baseURL = 'https://web.infenlaces.com/aws/'
 #baseURL = 'http://localhost:1313/'
 
 languageCode = 'es-es'
-title = 'Desarrollo Web en entorno servidor: PHP" '
+title = 'Máster de Desarrollo Web'
 
 
 # Para poder cargar emogin https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -76,7 +76,7 @@ languageName = "English"
 contentDir = "content/en"
 
 [languages.es]
-title = "Desarrollo Web en Entorno Servidor"
+title = "Máster de Desarrollo Web"
 languageName = "Español"
 contentDir = "content/es"
 
@@ -158,3 +158,17 @@ disable = false
 unsafe = true
 [outputs]
 section = [ "HTML", "RSS", "print" ]
+
+#Plantuml
+[params.plantuml]
+enable = true
+theme = "default"
+
+# Set url to plantuml server
+# default is http://www.plantuml.com/plantuml/svg/
+svg_image_url = "https://www.plantuml.com/plantuml/svg/"
+
+# By default the plantuml implementation uses <img /> tags to display UML diagrams.
+# When svg is set to true, diagrams are displayed using <svg /> tags, maintaining functionality like links e.g.
+# default = false
+svg = true

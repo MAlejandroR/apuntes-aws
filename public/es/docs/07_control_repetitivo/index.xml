@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iteraciones on Desarrollo Web en Entorno Servidor</title>
-    <link>https://web.infenlaces.com/php/es/docs/07_control_repetitivo/</link>
+    <link>http://localhost:1313/php/es/docs/07_control_repetitivo/</link>
     <description>Recent content in Iteraciones on Desarrollo Web en Entorno Servidor</description>
     <generator>Hugo</generator>
     <language>es</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://web.infenlaces.com/php/es/docs/07_control_repetitivo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/php/es/docs/07_control_repetitivo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

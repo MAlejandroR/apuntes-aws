@@ -1,0 +1,714 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/es/docs/01_ec2_bash/configurar/index.xml">
+<link rel="alternate" type="text/html" href="http://localhost:1313/es/_print/docs/01_ec2_bash/configurar/">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Instalaciones en  EC2 | Máster de Desarrollo Web</title>
+<meta name="description" content="Trabajar con la EC2">
+
+<meta property="og:url" content="http://localhost:1313/es/docs/01_ec2_bash/configurar/">
+  <meta property="og:site_name" content="Máster de Desarrollo Web">
+  <meta property="og:title" content="Instalaciones en  EC2">
+  <meta property="og:description" content="Trabajar con la EC2">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Instalaciones en  EC2">
+  <meta itemprop="description" content="Trabajar con la EC2">
+  <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
+  <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
+  <meta itemprop="wordCount" content="727">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Instalaciones en  EC2">
+  <meta name="twitter:description" content="Trabajar con la EC2">
+
+
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row ">
+  <a class="navbar-brand" href="/es/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/images/logo.png" alt="Logo" width="150" height="auto" />
+    </span><span class="navbar-brand__name">Máster de Desarrollo Web</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown d-none d-lg-block">
+        <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/en/">English</a></li>
+    <li><a class="dropdown-item" href="/fr/">Francés</a></li>
+    </ul>
+</div></li>
+      <li class="td-light-dark-menu nav-item dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/en/">English</a></li>
+    <li><a class="dropdown-item" href="/fr/">Francés</a></li>
+    </ul>
+</div>
+    </div>
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-esdocs-li">
+  <a href="/es/docs/" title="Laboratorio de Prácticas " class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-esdocs"><i class="fa-brands fa-aws"></i><span class="">Leaner Lab</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-esdocs00_acceso_curso_lab-li">
+  <input type="checkbox" id="m-esdocs00_acceso_curso_lab-check"/>
+  <label for="m-esdocs00_acceso_curso_lab-check"><a href="/es/docs/00_acceso_curso_lab/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs00_acceso_curso_lab"><i class="fas fa-sign-in-alt"></i><span class="">Acceso a Learner Lab</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-esdocs01_ec2-li">
+  <input type="checkbox" id="m-esdocs01_ec2-check"/>
+  <label for="m-esdocs01_ec2-check"><a href="/es/docs/01_ec2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2"><i class="fas fa-server"></i><span class="">Práctica 1: EC2</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-esdocs01_ec2configurar-li">
+  <input type="checkbox" id="m-esdocs01_ec2configurar-check"/>
+  <label for="m-esdocs01_ec2configurar-check"><a href="/es/docs/01_ec2/configurar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2configurar"><i class="fas fa-cogs"></i><span class="">Instalaciones en  EC2</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-esdocs01_ec2_bash-li">
+  <input type="checkbox" id="m-esdocs01_ec2_bash-check" checked/>
+  <label for="m-esdocs01_ec2_bash-check"><a href="/es/docs/01_ec2_bash/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2_bash"><i class="fas fa-server"></i><span class="">Práctica 1: EC2</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-esdocs01_ec2_bashconfigurar-li">
+  <input type="checkbox" id="m-esdocs01_ec2_bashconfigurar-check" checked/>
+  <label for="m-esdocs01_ec2_bashconfigurar-check"><a href="/es/docs/01_ec2_bash/configurar/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2_bashconfigurar"><i class="fas fa-cogs"></i><span class="td-sidebar-nav-active-item">Instalaciones en  EC2</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/es/_print/docs/01_ec2_bash/configurar/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hahahugoshortcode59s0hbhb">HAHAHUGOSHORTCODE59s0HBHB</a></li>
+    <li><a href="#accedemos-a-la-máquina">Accedemos a la máquina</a></li>
+    <li><a href="#conexión-por-ssh">Conexión por ssh</a></li>
+    <li><a href="#instalación-de-todo-el-sistema">Instalación de todo el sistema</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/es/docs/">Leaner Lab</a></li>
+  <li class="breadcrumb-item">
+    <a href="/es/docs/01_ec2_bash/">Práctica 1: EC2</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Instalaciones en  EC2</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Instalaciones en  EC2</h1>
+  <div class="lead">Trabajar con la EC2</div>
+	<header class="article-meta">
+		
+</header>
+	<h2 id="hahahugoshortcode59s0hbhb">
+
+
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            
+                <i class="fas fa-check-circle"></i> 
+            
+        </span>
+        
+        <span>Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight:bold">Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen; border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+            
+            <li>Conectarse</li>
+                
+            <li>Configurar nuestro sistema</li>
+                
+            <li>Desplegar un proyecto laravel</li>
+                
+            <li>Compartir ficheros entre la EC2 y nuestro equipo (fillezilla, phptorm o viusal code)</li>
+                
+            
+            
+        </ul>
+    </div>
+    
+
+
+</div>
+</h2>
+<h2 id="accedemos-a-la-máquina">Accedemos a la máquina</h2>
+<p>Verificamos en la consola de AWS que nuestra instancia está disponible.</p>
+<p>Para ello, volvemos al servicio EC2 y accedemos al listado de instancias (la página <strong>dashboard</strong> de instancias:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="../img_16.png" alt="img_16.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>En el panel de instancias podemos ver <strong>todas las instancias creadas</strong> y <strong>su estado</strong> actual.</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/es/docs/01_ec2_bash/configurar/img.png" alt="img.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>Seleccionamos la instancia para ver su información detallada:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/img_1.png" alt="img_1.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>Desde aquí podemos consultar datos importantes como:</p>
+<ul>
+<li>Dirección IP pública</li>
+<li>Dirección IP privada</li>
+<li>Estado de la instancia</li>
+<li>Tipo de instancia</li>
+<li>Zona de disponibilidad</li>
+</ul>
+<p>También podemos acceder a todos los detalles haciendo clic sobre la instancia.</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/es/docs/01_ec2_bash/configurar/img_1.png" alt="img_1.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Estados de una instancia
+
+
+</span>
+</strong>
+
+<p>Una instancia EC2 puede estar en diferentes estados:</p>
+<ul>
+<li><strong>pending</strong> → iniciándose</li>
+<li><strong>running</strong> → en ejecución</li>
+<li><strong>stopping / stopped</strong> → detenida</li>
+<li><strong>shutting-down / terminated</strong> → eliminándose / eliminada</li>
+</ul>
+<p>Importante:</p>
+<ul>
+<li>Una instancia <strong>stopped</strong> se puede volver a iniciar</li>
+<li>Una instancia <strong>terminated</strong> no se puede recuperar</li>
+</ul>
+<p>Cuando eliminamos una instancia, puede seguir apareciendo durante un tiempo en el listado hasta que AWS la elimina completamente.</p>
+<h2 id="conexión-por-ssh">Conexión por ssh</h2>
+<p>Para conectar a la instancia lo vamos a hacer por <strong>SSH</strong>. Podremos conectar desde <em>una máquina Linux o una máquina Windows.</em></p>
+<p>Vamos a conectar de varias formas:</p>
+<ul>
+<li>Consola</li>
+<li>Desde un IDE (PhpStorm o Visual Studio Code)</li>
+<li>Desde un cliente FTP (FileZilla)</li>
+</ul>
+<hr>
+<p>Necesitamos para conectar disponer de la <strong>clave privada</strong> de la pareja de claves con los permisos correctos.</p>
+<p>Descargamos el fichero de clave privada desde la plataforma (botón <strong>AWS Details</strong>) y lo guardamos en un directorio local.</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/es/docs/01_ec2_bash/configurar/images/AWS_Details_select.png" alt="AWS_Details_select.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/ventana_PPK_PEM.png" alt="ventana_PPK_PEM.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>Vemos dos tipos de claves privadas, nosotros utilizaremos <strong>PEM</strong>:</p>
+<ul>
+<li>
+<p><strong>PEM (Privacy-Enhanced Mail)</strong><br>
+Formato estándar de clave privada usado en Linux/Mac para conectarse por SSH (ej. EC2).</p>
+</li>
+<li>
+<p><strong>PPK (PuTTY Private Key)</strong><br>
+Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
+</li>
+</ul>
+<hr>
+<p>Descargamos el fichero y cambiamos los permisos.</p>
+<blockquote>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    En Linux
+
+
+</span>
+</strong>
+</li>
+</ul>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    chmod <span style="color:#666">400</span> labsuser.pem</span></span></code></pre></div>
+<hr>
+<blockquote>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    En Windows
+
+
+</span>
+</strong>
+</li>
+</ul>
+</blockquote>
+<p>Para que la clave funcione correctamente en Windows, debemos restringir los permisos del fichero:</p>
+<ul>
+<li>Clic derecho sobre el fichero <code>.pem</code></li>
+<li><strong>Propiedades</strong></li>
+<li>Pestaña <strong>Seguridad</strong></li>
+<li>Pulsar en <strong>Opciones avanzadas</strong></li>
+<li>Pulsar en <strong>Deshabilitar herencia</strong></li>
+<li>Elegir <strong>Quitar todos los permisos heredados</strong></li>
+<li>Pulsar en <strong>Agregar</strong></li>
+<li>Seleccionar tu usuario</li>
+<li>Dar permisos de <strong>Lectura</strong></li>
+<li>Eliminar cualquier otro usuario/grupo si aparece</li>
+</ul>
+<hr>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Establecemos la conexión
+
+
+</span>
+</strong>
+
+<p>Localizamos la IP pública para poder conectar:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/img_2.png" alt="img_2.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>Tanto en Windows como en Linux vamos a conectar por SSH (en Windows también se puede usar PuTTY).</p>
+<p>En Windows abrimos una <strong>PowerShell</strong>.</p>
+<p>El usuario que se crea en este tipo de instancias (Ubuntu) es <strong>ubuntu</strong>, y lo especificaremos en la conexión.</p>
+<p>Si tenemos dudas, podemos verlo en el botón <strong>Connect</strong> de la instancia.</p>
+<p>En general, los usuarios por defecto son:</p>
+<table>
+  <thead>
+      <tr>
+          <th>AMI</th>
+          <th>Usuario</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ubuntu</td>
+          <td>ubuntu</td>
+      </tr>
+      <tr>
+          <td>Amazon Linux</td>
+          <td>ec2-user</td>
+      </tr>
+      <tr>
+          <td>Debian</td>
+          <td>admin</td>
+      </tr>
+      <tr>
+          <td>CentOS</td>
+          <td>centos</td>
+      </tr>
+      <tr>
+          <td>RHEL</td>
+          <td>ec2-user</td>
+      </tr>
+      <tr>
+          <td>SUSE</td>
+          <td>ec2-user</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -i labsuser.pem ubuntu@100.48.89.140</span></span></code></pre></div>
+<hr>
+<p>Nos preguntará si queremos continuar con la conexión:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/fingerprint_question.png" alt="img_2.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>Escribimos <strong>yes</strong> y se establecerá la conexión:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/conexion_ssh_ok.png" alt="Mensaje conexión ssh ok">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<h2 id="instalación-de-todo-el-sistema">Instalación de todo el sistema</h2>
+<p>Ahora vamos a proceder a la instalación de las librerías necesarias para nuestro objetivo.</p>
+<p>Primero actualizamos los repositorios de paquetes:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update</span></span></code></pre></div>
+<hr>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    php y apache2
+
+
+</span>
+</strong>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install -y php apache2 libapache2-mod-php</span></span></code></pre></div>
+<hr>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Librerías necesarias para nuestro proyecto de laravel
+
+
+</span>
+</strong>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql</span></span></code></pre></div>
+<hr>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    composer
+
+
+</span>
+</strong>
+</li>
+</ul>
+<p>Para instalar composer tenemos diferentes opciones. En este caso vamos a descargar el instalador, ejecutarlo con PHP y copiar el ejecutable generado a una carpeta que está en el PATH del sistema con el nombre <strong>composer</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#b44">&#34;https://getcomposer.org/installer&#34;</span> -o composer.phar
+</span></span><span style="display:flex;"><span>sudo php composer.phar --install-dir<span style="color:#666">=</span>/usr/local/bin --filename<span style="color:#666">=</span>composer</span></span></code></pre></div>
+<p>Tras la instalación podemos verificar la versión (se instalará la última disponible):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer --version</span></span></code></pre></div>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/composer_version.png" alt="Ver versión de composer">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<ul>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    node y npm
+
+
+</span>
+</strong>
+</li>
+</ul>
+<p>En este caso procederemos de forma similar, descargando el script de configuración e instalando Node.js.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#b44">&#34;https://deb.nodesource.com/setup_22.x&#34;</span> -o node.sh
+</span></span><span style="display:flex;"><span>sudo -E bash ./node.sh
+</span></span><span style="display:flex;"><span>sudo apt install -y nodejs</span></span></code></pre></div>
+<p>Igualmente que en el caso anterior, tras la instalación deberemos verificarlo:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node -v
+</span></span><span style="display:flex;"><span>npm -v</span></span></code></pre></div>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/node_npm_version.png" alt="Ver versión de node y de npm">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Preparar el document root para copiar el proyecto de laravel
+
+
+</span>
+</strong>
+
+<p>Ahora queremos copiar el proyecto de Laravel en la carpeta <strong>/var/www/html</strong>, para lo cual necesitamos permisos de escritura en esa carpeta.</p>
+<p>Actualmente esta carpeta es propiedad de <strong>root</strong>, ya que se ha creado durante la instalación de Apache (que hemos hecho con <strong>sudo</strong>).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chown -R ubuntu:www-data /var/www/html</span></span></code></pre></div>
+<p>Podemos ver la evolución de propietarios en la siguiente imagen:</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="images/permisos_var_www.png" alt="propietario carpetas /var/www"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<hr>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Clonamos el proyecto de laravel
+
+
+</span>
+</strong>
+<br /></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a2f">cd</span> /var/www/html
+</span></span><span style="display:flex;"><span>git clone https://github.com/MAlejandroR/laravel_aws.git</span></span></code></pre></div>
+<p>Esto nos descargará el proyecto en la carpeta <strong>laravel_aws</strong>, teniendo el directorio:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/var/www/html/laravel_aws
+</span></span></code></pre></div>
+  <div class="section-index">
+    
+    
+    </div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="manuelromeromiguel@gmail.com" aria-label="manuelromeromiguel@gmail.com">
+    <a target="_blank" rel="noopener" href="mailto:manuelromeromiguel@gmail.com" aria-label="manuelromeromiguel@gmail.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/MAlejandroR" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2026
+    <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src='/js/deflate.js'></script>
+<script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

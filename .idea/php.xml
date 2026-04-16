@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="54b57717-abdc-4c4d-ad40-a7402978a35a" timeout="30000" />
+    </phpcs_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="/var/www/html/BD/vendor/symfony/polyfill-ctype" />
+      <path value="/var/www/html/BD/vendor/symfony/polyfill-mbstring" />
+      <path value="/var/www/html/BD/vendor/symfony/polyfill-php80" />
+      <path value="/var/www/html/BD/vendor/vlucas/phpdotenv" />
+      <path value="/var/www/html/BD/vendor/phpoption/phpoption" />
+      <path value="/var/www/html/BD/vendor/composer" />
+      <path value="/var/www/html/BD/vendor/graham-campbell/result-type" />
+      <path value="/var/www/html/arrays/vendor/fzaninotto/faker" />
+      <path value="/var/www/html/arrays/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.4">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStan">
+    <PhpStan_settings>
+      <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="54b57717-abdc-4c4d-ad40-a7402978a35a" timeout="60000" />
+    </PhpStan_settings>
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="Psalm">
+    <Psalm_settings>
+      <psalm_fixer_by_interpreter asDefaultInterpreter="true" interpreter_id="54b57717-abdc-4c4d-ad40-a7402978a35a" timeout="60000" />
+    </Psalm_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

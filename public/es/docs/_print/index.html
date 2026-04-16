@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head>
+  <head><script src="/php/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=php/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="https://web.infenlaces.com/php/es/docs/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/php/es/docs/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/php/es/docs/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/php/es/docs/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -23,27 +23,27 @@
 <meta name="description" content="WWW es nuestro entorno de trabajo
 ">
 
-<meta property="og:url" content="https://web.infenlaces.com/php/es/docs/">
+<meta property="og:url" content="http://localhost:1313/php/es/docs/">
   <meta property="og:site_name" content="Desarrollo Web en Entorno Servidor">
   <meta property="og:title" content="PHP ">
   <meta property="og:description" content="WWW es nuestro entorno de trabajo">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="https://web.infenlaces.com/php/es/docs/featured-background.png">
+    <meta property="og:image" content="http://localhost:1313/php/es/docs/featured-background.png">
 
   <meta itemprop="name" content="PHP ">
   <meta itemprop="description" content="WWW es nuestro entorno de trabajo">
   <meta itemprop="datePublished" content="2024-09-15T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-09-15T00:00:00+00:00">
   <meta itemprop="wordCount" content="115">
-  <meta itemprop="image" content="https://web.infenlaces.com/php/es/docs/featured-background.png">
+  <meta itemprop="image" content="http://localhost:1313/php/es/docs/featured-background.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://web.infenlaces.com/php/es/docs/featured-background.png">
+  <meta name="twitter:image" content="http://localhost:1313/php/es/docs/featured-background.png">
   <meta name="twitter:title" content="PHP ">
   <meta name="twitter:description" content="WWW es nuestro entorno de trabajo">
 
 
-<link rel="preload" href="/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" as="style"><link href="/php/scss/main.min.12e7d3ae2a858efd3cf9b95e11c324172bee6b9d2562bd9833415a6e89f5bdeb.css" rel="stylesheet">
+<link href="/php/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -317,7 +317,7 @@ Versión imprimible multipagina.
     
     
 	
-<li>9: <a href="#pg-4cff256b2eb8b592186e9090fa64f641">Funciones</a></li>
+<li>9: <a href="#pg-36f8555bfcbbd95d7b3973b8176f7844">Bases de datos en php</a></li>
 
 
     
@@ -328,14 +328,6 @@ Versión imprimible multipagina.
   
   
 
-  
-    
-    
-	
-<li>9.1: <a href="#pg-96da878a0b24f9b374b611f375512bdf">Prácticas</a></li>
-
-
-    
   
 
     </ul>
@@ -1904,11 +1896,55 @@ Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-4cff256b2eb8b592186e9090fa64f641">9 - Funciones</h1>
+	<h1 id="pg-36f8555bfcbbd95d7b3973b8176f7844">9 - Bases de datos en php</h1>
     
-	<h2 id="funciones-en-php">Funciones en php</h2>
+	<h3 id="objetivos-de-este-tema">Objetivos de este tema</h3>
+
+
+
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            
+                <i class="fas fa-check-circle"></i> 
+            
+        </span>
+        
+        <span>Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight:bold">Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen; border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+            
+            <li>Repaso de bases de datos</li>
+            
+            <li>Gestor de bases de datos Mysql</li>
+            
+            <li>Conectores o Recursos en php para acceder a datos</li>
+            
+            <li>Estudo de mysqli</li>
+            
+            <li>Estudo de PDO</li>
+            
+            
+            
+        </ul>
+    </div>
+    
+
+
+</div>
+
 <div class="iframe-container">
-<iframe src="https://es.wikieducator.org/index.php?curid=5834" width="100%" height="13000">WikiEducator </iframe>
+<iframe src="https://es.wikieducator.org/index.php?curid=6709" width="100%" height="844">WikiEducator </iframe>
 </div>
 
 </div>
@@ -1925,27 +1961,6 @@ Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en
   
   
 
-  
-    
-    
-	
-    
-
-<div class="td-content" style="">
-    
-	<h1 id="pg-96da878a0b24f9b374b611f375512bdf">9.1 - Prácticas</h1>
-    
-	<h2 id="practica-de-gestión-de-tareas">Practica de gestión de tareas</h2>
-<div class="iframe-container">
-<iframe src="https://es.wikieducator.org/index.php?curid=6704" width="100%" height="1221">WikiEducator </iframe>
-</div>
-
-</div>
-
-
-
-    
-	
   
 
     
@@ -2270,7 +2285,7 @@ Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en
         
       </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
         <span class="td-footer__copyright">&copy;
-    2024
+    2025
     <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad</a></span>
       </div>
     </div>
@@ -2278,8 +2293,8 @@ Lo primero que debemos tener claro es que cuando <strong>PHP</strong> le dice en
 </footer>
 
     </div>
-    <script src="/php/js/main.min.6cb1f0587ffe05dc46abdc842cf597b013c8fb6b6f24b6bdeac8a41f17ce5957.js" integrity="sha256-bLHwWH/&#43;BdxGq9yELPWXsBPI&#43;2tvJLa96sikHxfOWVc=" crossorigin="anonymous"></script>
-<script defer src="/php/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+    <script src="/php/js/main.js"></script>
+<script defer src="/php/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/php/js/tabpane-persist.js'></script>
 
   </body>

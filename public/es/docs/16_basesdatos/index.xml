@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bases de datos en php on Desarrollo Web en Entorno Servidor</title>
+    <link>http://localhost:1313/php/es/docs/16_basesdatos/</link>
+    <description>Recent content in Bases de datos en php on Desarrollo Web en Entorno Servidor</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/php/es/docs/16_basesdatos/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

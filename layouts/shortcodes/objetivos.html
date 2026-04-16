@@ -25,9 +25,9 @@
     <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
         <ul>
             {{ range (split .Inner "\n") }}
-            {{- if gt (len .) 0 -}}
-            <li>{{ . }}</li>
-            {{ end }}
+                {{- if gt (len .) 0 -}}
+                    <li>{{ . }}</li>
+                {{ end }}
             {{ end }}
         </ul>
     </div>

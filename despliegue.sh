@@ -12,4 +12,4 @@ sudo rm -r ./public
 hugo -d public
 
 # Sincroniza los archivos al servidor remoto usando rsync con puerto SSH 22123
-rsync -avz -e "ssh -p 22123" ./public/ admin@web.infenlaces.com:web/web.infenlaces.com/public_html/php
+rsync -avz -e "ssh -p 22123" ./public/ admin@web.infenlaces.com:web/web.infenlaces.com/public_html/aws
