@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Servicio de bukets S3">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="303">
+  <meta itemprop="wordCount" content="332">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="S3">
   <meta name="twitter:description" content="Servicio de bukets S3">
@@ -59,8 +59,8 @@
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/aws/en/">English</a></li>
     <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
+    <li><a class="dropdown-item" href="/aws/en/">English</a></li>
     </ul>
 </div></li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -326,7 +326,18 @@ Con estas opciones seleccionamos crear el bukets
 <hr style="border: none; border-top: 5px solid green;">
 </p>
 <p>Hay que copiar este fichero json que establece políticas de acceso a este bucket.Debes de especificar el nombre del bucket concreto.En nuestro caso es <strong>2048-aws</strong>, pero modifícalo según sea tu nombre</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#b44">&#34;Version&#34;</span>: <span style="color:#b44">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#b44">&#34;Statement&#34;</span>: <span style="color:#666">[</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#666">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>            <span style="color:#b44">&#34;Sid&#34;</span>: <span style="color:#b44">&#34;PublicReadGetObject&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>            <span style="color:#b44">&#34;Effect&#34;</span>: <span style="color:#b44">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            <span style="color:#b44">&#34;Principal&#34;</span>: <span style="color:#b44">&#34;*&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>            <span style="color:#b44">&#34;Action&#34;</span>: <span style="color:#b44">&#34;s3:GetObject&#34;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>            <span style="color:#b44">&#34;Resource&#34;</span>: <span style="color:#b44">&#34;arn:aws:s3:::2048-aws/*&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#666">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#666">}</span></span></span></code></pre></div>
 <p>Ahora  en el dashboard del S3, copiamos la url (previo selecionamos el index) y podremos acceder a nuestro bucket en la red</p>
 <p>
 

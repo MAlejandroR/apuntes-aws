@@ -128,12 +128,12 @@ printf "=================================================================\n";
 printf "===============INSTALACIÓN DE NODE =====================\n";
 printf "=================================================================\n\n";
 curl https://deb.nodesource.com/setup_24.x -o node.sh
-sudo -E bash ./node.sh
-sudo apt install -y nodejs
+sudo -E bash ./node.sh && sudo apt install -y nodejs
 
 printf "=================================================================\n";
 printf "===============CLONAR EL PROYECTO LARAVEL =====================\n";
 printf "=================================================================\n\n";
+sudo chown ubuntu:www-data /var/www/html
 cd /var/www/html
 git clone https://github.com/MAlejandroR/laravel_aws.git
 
