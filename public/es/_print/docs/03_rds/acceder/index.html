@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Acceder a la bd">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="13">
+  <meta itemprop="wordCount" content="86">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Acceso a RDS">
   <meta name="twitter:description" content="Acceder a la bd">
@@ -165,6 +165,65 @@ Versión imprimible multipagina.
 <div class="content">
       <h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
 <p>Lo primero que necesitamos el el punto de acceso</p>
+<p>Para ello vamos a la opción <strong>Conectividad y seguridad</strong> y seleccionamo <strong>puntos de conexion</strong></p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/acceder/img.png" alt="img.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>En esa ventana buscamos el punto de enlace
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/acceder/img_1.png" alt="img_1.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+Ese es nuestro punto de enlace</p>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Un docker para conectar
+
+
+</span>
+</strong>
+
+<p>Creamos un docker asignando directamente esas credenciales</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>services:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>phpmyadmin:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>image: phpmyadmin
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>ports:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>- 8100:80
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>environment:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>- <span style="color:#b8860b">PMA_HOST</span><span style="color:#666">=</span>database-2.cpq8yuuka3jr.us-east-1.rds.amazonaws.com
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>- <span style="color:#b8860b">PMA_USER</span><span style="color:#666">=</span>admin
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>- <span style="color:#b8860b">PMA_PASSWORD</span><span style="color:#666">=</span><span style="color:#666">12345678</span></span></span></code></pre></div>
+<p>Ahora lanzamos el docker
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>docker compose up -d</span></span></code></pre></div></p>
+<p>Podemos abrir el navegador y vemos nuestra base de datos en AWS
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_rds/acceder/img_2.png" alt="img_2.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
 
 </div>
 </div>
