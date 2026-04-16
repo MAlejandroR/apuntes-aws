@@ -1,8 +1,8 @@
 ---
-title: "Conexión SSH a EC2 con Visual Studio Code"
+title: "Conexión SSH Visual"
 date: 2024-10-15
 draft: false
-weight: 20
+weight: 40
 icon: "fas fa-terminal"
 description: "Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code"
 ---
@@ -31,8 +31,9 @@ description: "Conectar a una instancia EC2 de AWS mediante SSH usando Visual Stu
 
 ### 3. Preparar la clave `.pem`
 
-{{< highlight bash >}}
-chmod 400 mi-clave.pem
+
+{{< highlight "style=emacs">}}
+    chmod 400 mi-clave.pem
 {{< /highlight >}}
 
 ---
@@ -41,26 +42,26 @@ chmod 400 mi-clave.pem
 
 Ruta del fichero:
 
-{{< highlight bash >}}
-~/.ssh/config
+{{< highlight "style=emacs">}}
+    ~/.ssh/config
 {{< /highlight >}}
 
 Configuración:
 
-{{< highlight bash >}}
-Host mi-ec2
-HostName IP_PUBLICA_O_DNS
-User ubuntu
-IdentityFile /ruta/a/mi-clave.pem
+{{< highlight "style=emacs">}}
+    Host mi-ec2
+        HostName IP_PUBLICA_O_DNS
+        User ubuntu
+        IdentityFile /ruta/a/mi-clave.pem
 {{< /highlight >}}
 
 Ejemplo:
 
-{{< highlight bash >}}
+{{< highlight "style=emacs">}}
 Host mi-ec2
-HostName ec2-54-210-124-155.compute-1.amazonaws.com
-User ubuntu
-IdentityFile ~/.ssh/mi-clave.pem
+    HostName ec2-54-210-124-155.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/mi-clave.pem
 {{< /highlight >}}
 
 ---
@@ -87,8 +88,8 @@ IdentityFile ~/.ssh/mi-clave.pem
 
 - Abrir carpeta remota:
 
-{{< highlight bash >}}
-/var/www/html
+{{< highlight "style=emacs">}}
+    /var/www/html/laravel_aws
 {{< /highlight >}}
 
 - Editar archivos directamente
@@ -118,8 +119,8 @@ chmod 400 mi-clave.pem
 
 ### 9. Comprobación manual
 
-{{< highlight bash >}}
-ssh -i mi-clave.pem ubuntu@IP_PUBLICA
+{{< highlight "style=emacs">}}
+    ssh -i mi-clave.pem ubuntu@IP_PUBLICA
 {{< /highlight >}}
 
 ---

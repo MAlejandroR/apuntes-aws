@@ -6,13 +6,13 @@
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://web.infenlaces.com/aws/fr/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://web.infenlaces.com/aws/en/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -28,6 +28,9 @@
   </url><url>
     <loc>https://web.infenlaces.com/aws/es/docs/01_ec2/configurar/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
+  </url><url>
+    <loc>https://web.infenlaces.com/aws/es/docs/04_visualcode/</loc>
+    <lastmod>2024-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://web.infenlaces.com/aws/es/docs/01_ec2_bash/</loc>
     <lastmod>2024-10-15T07:04:49+02:00</lastmod>
@@ -47,13 +50,13 @@
     <loc>https://web.infenlaces.com/aws/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://web.infenlaces.com/aws/en/categories/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://web.infenlaces.com/aws/fr/categories/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"

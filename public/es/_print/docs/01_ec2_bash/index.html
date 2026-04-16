@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Crear una EC2 básica y desplegar un Laravel">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="759">
+  <meta itemprop="wordCount" content="764">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Crear un shell">
   <meta name="twitter:description" content="Crear una EC2 básica y desplegar un Laravel">
@@ -59,8 +59,8 @@
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     <li><a class="dropdown-item" href="/aws/en/">English</a></li>
+    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     </ul>
 </div></li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -240,12 +240,12 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE NODE =====================\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>curl https://deb.nodesource.com/setup_24.x -o node.sh
-</span></span><span style="display:flex;"><span>sudo -E bash ./node.sh
-</span></span><span style="display:flex;"><span>sudo apt install -y nodejs
+</span></span><span style="display:flex;"><span>sudo -E bash ./node.sh <span style="color:#666">&amp;&amp;</span> sudo apt install -y nodejs
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============CLONAR EL PROYECTO LARAVEL =====================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============CLONAR EL PROYECTO LARAVEL =====================\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo chown ubuntu:www-data /var/www/html
 </span></span><span style="display:flex;"><span><span style="color:#a2f">cd</span> /var/www/html
 </span></span><span style="display:flex;"><span>git clone https://github.com/MAlejandroR/laravel_aws.git
 </span></span><span style="display:flex;"><span>

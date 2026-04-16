@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
   <head>
-	<meta name="generator" content="Hugo 0.160.1">
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/index.xml">
-<meta name="robots" content="index, follow">
+<link rel="canonical" type="text/html" href="https://web.infenlaces.com/aws/es/docs/04_visualcode/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/docs/04_visualcode/index.xml">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/aws/favicons/favicon.ico" >
@@ -19,27 +19,24 @@
 <link rel="icon" type="image/png" href="/aws/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/aws/favicons/android-192x192.png" sizes="192x192">
 
-<title>Máster de Desarrollo Web</title>
-<meta name="description" content="Prácticas de AWS - Máster Desarrollo Web 2026">
+<title>Conexión SSH a EC2 con Visual Studio Code | Máster de Desarrollo Web</title>
+<meta name="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
-<meta property="og:url" content="https://web.infenlaces.com/aws/es/">
+<meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/04_visualcode/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
-  <meta property="og:title" content="Prácticas AWS">
-  <meta property="og:description" content="Prácticas de AWS - Máster Desarrollo Web 2026">
+  <meta property="og:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta property="og:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="website">
-    <meta property="og:image" content="https://web.infenlaces.com/aws/es/featured-background.png">
 
-  <meta itemprop="name" content="Prácticas AWS">
-  <meta itemprop="description" content="Prácticas de AWS - Máster Desarrollo Web 2026">
-  <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="99">
-  <meta itemprop="image" content="https://web.infenlaces.com/aws/es/featured-background.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://web.infenlaces.com/aws/es/featured-background.png">
-  <meta name="twitter:title" content="Prácticas AWS">
-  <meta name="twitter:description" content="Prácticas de AWS - Máster Desarrollo Web 2026">
+  <meta itemprop="name" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta itemprop="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
+  <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-15T00:00:00+00:00">
+  <meta itemprop="wordCount" content="220">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta name="twitter:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
 
 <link rel="preload" href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" as="style"><link href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" rel="stylesheet">
@@ -49,9 +46,9 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-home">
+  <body class="td-section">
     <header>
-      <nav class="td-navbar js-navbar-scroll  td-navbar-cover "  data-bs-theme="dark">
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row ">
   <a class="navbar-brand" href="/aws/es/"><span class="navbar-brand__logo navbar-logo">
     <img src="/aws/images/logo.png" alt="Logo" width="150" height="auto" />
@@ -126,166 +123,156 @@
 </nav>
 
     </header>
-    <div class="container-fluid td-default td-outer">
-      <main role="main" class="td-main">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="preload" as="image" href="/aws/es/featured-background_hu_a26f9c60e79c1066.png" media="(max-width: 1200px)">
-<link rel="preload" as="image" href="/aws/es/featured-background_hu_978716250399c6b8.png" media="(min-width: 1200px)">
-<style>
-  #td-cover-block-0 {
-    background-image: url(/aws/es/featured-background_hu_a26f9c60e79c1066.png);
-  }
-  @media only screen and (min-width: 1200px) {
-    #td-cover-block-0 {
-    background-image: url(/aws/es/featured-background_hu_978716250399c6b8.png);
-  }
-  }
-</style>
-
-<section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-full js-td-cover td-overlay td-overlay--dark -bg-dark">
-  <div class="container td-overlay__inner">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-center">
-          <div class="pt-3 lead ">
-            
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
 
-<div class="mx-auto text-center">
 
-	<h2 class="mt-3" style="color:#ffffff; font-weight:700;">
-		Máster de Desarrollo Web 2026
-	</h2>
 
-	<p class="lead" style="color:#f1f1f1; font-weight:500;">
-		Aprende a desplegar aplicaciones reales en la nube usando AWS
-	</p>
 
-	<a class="btn btn-lg btn-primary mt-3" href="./docs/">
-		Empezar <i class="fas fa-arrow-right ml-2"></i>
-	</a>
-
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+Versión imprimible multipagina.
+<a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
+</p><p>
+<a href="/aws/es/docs/04_visualcode/">Volver a la vista normal de esta página</a>.
+</p>
 </div>
 
 
-            
-          </div>
-          <h1 class="cover-title-background fw-bolder mt-0 mt-md-5 pb-4">
-          Prácticas en AWS ☁️</h1>
 
-          
+<h1 class="title">Conexión SSH a EC2 con Visual Studio Code</h1>
+<div class="lead">Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code</div>
 
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="conexión-por-ssh-a-una-instancia-ec2-usando-visual-studio-code">Conexión por SSH a una instancia EC2 usando Visual Studio Code</h2>
+<h3 id="1-requisitos-previos">1. Requisitos previos</h3>
+<ul>
+<li>Tener una instancia EC2 creada en AWS</li>
+<li>Disponer del archivo <code>.pem</code> (clave privada)</li>
+<li>Conocer la IP pública o DNS de la instancia</li>
+<li>Tener instalado:
+<ul>
+<li>Visual Studio Code</li>
+<li>Extensión <strong>Remote - SSH</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="2-instalar-extensión-en-vs-code">2. Instalar extensión en VS Code</h3>
+<ol>
+<li>Abrir Visual Studio Code</li>
+<li>Ir a <strong>Extensiones</strong> (Ctrl + Shift + X)</li>
+<li>Buscar: <code>Remote - SSH</code></li>
+<li>Instalar la extensión de Microsoft</li>
+</ol>
+<hr>
+<h3 id="3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<hr>
+<h3 id="4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</h3>
+<p>Ruta del fichero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/config</span></span></code></pre></div>
+<p>Configuración:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
+</span></span><span style="display:flex;"><span>HostName IP_PUBLICA_O_DNS
+</span></span><span style="display:flex;"><span>User ubuntu
+</span></span><span style="display:flex;"><span>IdentityFile /ruta/a/mi-clave.pem</span></span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
+</span></span><span style="display:flex;"><span>HostName ec2-54-210-124-155.compute-1.amazonaws.com
+</span></span><span style="display:flex;"><span>User ubuntu
+</span></span><span style="display:flex;"><span>IdentityFile ~/.ssh/mi-clave.pem</span></span></code></pre></div>
+<hr>
+<h3 id="5-conectarse-desde-vs-code">5. Conectarse desde VS Code</h3>
+<ol>
+<li>Abrir la paleta de comandos (<code>Ctrl + Shift + P</code>)</li>
+<li>Ejecutar:
+<ul>
+<li><code>Remote-SSH: Connect to Host</code></li>
+</ul>
+</li>
+<li>Seleccionar:
+<ul>
+<li><code>mi-ec2</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-primera-conexión">6. Primera conexión</h3>
+<ul>
+<li>VS Code instalará el servidor remoto automáticamente</li>
+<li>Aceptar el fingerprint si lo solicita</li>
+<li>Esperar unos segundos</li>
+</ul>
+<hr>
+<h3 id="7-trabajar-en-la-instancia">7. Trabajar en la instancia</h3>
+<ul>
+<li>Abrir carpeta remota:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/www/html</span></span></code></pre></div>
+<ul>
+<li>Editar archivos directamente</li>
+<li>Usar terminal integrada</li>
+</ul>
+<hr>
+<h3 id="8-problemas-comunes">8. Problemas comunes</h3>
+<h4 id="permisos-de-la-clave">Permisos de la clave</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<h4 id="error-de-conexión">Error de conexión</h4>
+<ul>
+<li>Verificar IP pública</li>
+<li>Verificar Security Group (puerto 22 abierto)</li>
+</ul>
+<h4 id="usuario-incorrecto">Usuario incorrecto</h4>
+<ul>
+<li>Ubuntu → <code>ubuntu</code></li>
+<li>Amazon Linux → <code>ec2-user</code></li>
+</ul>
+<hr>
+<h3 id="9-comprobación-manual">9. Comprobación manual</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i mi-clave.pem ubuntu@IP_PUBLICA</span></span></code></pre></div>
+<hr>
+<h3 id="10-recomendación">10. Recomendación</h3>
+<p>Guardar la configuración en <code>~/.ssh/config</code> permite reutilizar conexiones fácilmente y simplifica el acceso desde Visual Studio Code.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
         </div>
       </div>
-    </div>
-  </div>
-  
-</section>
-
-
----
-<div><a id="td-block-1" class="td-offset-anchor"></a></div>
-<section class="row td-box td-box--1 td-box--height-auto">
-<div class="col">
-<div class="container">
-
-
-
-<div class="row text-center">
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-server fa-3x mb-3"></i>
-		<h3>Computo (EC2)</h3>
-		<p>Crea servidores en la nube y despliega aplicaciones web.</p>
-	</div>
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-box fa-3x mb-3"></i>
-		<h3>Contenedores (ECS, Fargate)</h3>
-		<p>Ejecuta aplicaciones usando Docker en la nube sin gestionar servidores.</p>
-	</div>
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-bolt fa-3x mb-3"></i>
-		<h3>Serverless (Lambda)</h3>
-		<p>Ejecuta código sin servidores y responde a eventos.</p>
-	</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
----
-<div><a id="td-block-2" class="td-offset-anchor"></a></div>
-<section class="row td-box td-box--light td-box--height-auto">
-<div class="col">
-<div class="container">
-
-
-
-<div class="row text-center">
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-play-circle fa-3x mb-3"></i>
-		<h3>Primeros pasos</h3>
-		<p>Accede al Learner Lab y familiarízate con el entorno AWS.</p>
-	</div>
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-network-wired fa-3x mb-3"></i>
-		<h3>Arquitecturas cloud</h3>
-		<p>Comprende cómo se diseñan aplicaciones escalables y disponibles.</p>
-	</div>
-
-	<div class="col-md-4 mb-4">
-		<i class="fas fa-euro-sign fa-3x mb-3"></i>
-		<h3>Costes y buenas prácticas</h3>
-		<p>Aprende a optimizar recursos y evitar gastos innecesarios.</p>
-	</div>
-
-</div>
-
-</div>
-</div>
-</section>
-
----
-
-<div><a id="td-block-3" class="td-offset-anchor"></a></div>
-<section class="row td-box td-box--primary position-relative td-box--height-auto">
-<div class="col-12">
-<div class="container text-center td-arrow-down">
-<div class="h4 mb-0">
-
-
-🚀 Objetivo: desplegar una aplicación real en AWS
-
-</div>
-</div>
-</div>
-</section>
-
-
-
-      </main>
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
     <div class="row mx-md-2">

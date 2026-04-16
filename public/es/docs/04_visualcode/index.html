@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/docs/00_acceso_curso_lab/index.xml">
-<link rel="alternate" type="text/html" href="https://web.infenlaces.com/aws/es/_print/docs/00_acceso_curso_lab/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/docs/04_visualcode/index.xml">
+<link rel="alternate" type="text/html" href="https://web.infenlaces.com/aws/es/_print/docs/04_visualcode/">
 <meta name="robots" content="index, follow">
 
 
@@ -19,24 +19,24 @@
 <link rel="icon" type="image/png" href="/aws/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/aws/favicons/android-192x192.png" sizes="192x192">
 
-<title>Acceso a Learner Lab | Máster de Desarrollo Web</title>
-<meta name="description" content="Cómo acceder a learner lab">
+<title>Conexión SSH a EC2 con Visual Studio Code | Máster de Desarrollo Web</title>
+<meta name="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
-<meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/00_acceso_curso_lab/">
+<meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/04_visualcode/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
-  <meta property="og:title" content="Acceso a Learner Lab">
-  <meta property="og:description" content="Cómo acceder a learner lab">
+  <meta property="og:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta property="og:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Acceso a Learner Lab">
-  <meta itemprop="description" content="Cómo acceder a learner lab">
-  <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="295">
+  <meta itemprop="name" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta itemprop="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
+  <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-15T00:00:00+00:00">
+  <meta itemprop="wordCount" content="220">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Acceso a Learner Lab">
-  <meta name="twitter:description" content="Cómo acceder a learner lab">
+  <meta name="twitter:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta name="twitter:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
 
 <link rel="preload" href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" as="style"><link href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" rel="stylesheet">
@@ -147,9 +147,9 @@
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-awsesdocs-li">
   <a href="/aws/es/docs/" title="Laboratorio de Prácticas " class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-awsesdocs"><i class="fa-brands fa-aws"></i><span class="">Leaner Lab</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-awsesdocs00_acceso_curso_lab-li">
-  <input type="checkbox" id="m-awsesdocs00_acceso_curso_lab-check" checked/>
-  <label for="m-awsesdocs00_acceso_curso_lab-check"><a href="/aws/es/docs/00_acceso_curso_lab/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-awsesdocs00_acceso_curso_lab"><i class="fas fa-sign-in-alt"></i><span class="td-sidebar-nav-active-item">Acceso a Learner Lab</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs00_acceso_curso_lab-li">
+  <input type="checkbox" id="m-awsesdocs00_acceso_curso_lab-check"/>
+  <label for="m-awsesdocs00_acceso_curso_lab-check"><a href="/aws/es/docs/00_acceso_curso_lab/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs00_acceso_curso_lab"><i class="fas fa-sign-in-alt"></i><span class="">Acceso a Learner Lab</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-awsesdocs01_ec2-li">
   <input type="checkbox" id="m-awsesdocs01_ec2-check"/>
@@ -162,9 +162,9 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs04_visualcode-li">
-  <input type="checkbox" id="m-awsesdocs04_visualcode-check"/>
-  <label for="m-awsesdocs04_visualcode-check"><a href="/aws/es/docs/04_visualcode/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs04_visualcode"><i class="fas fa-terminal"></i><span class="">Conexión SSH a EC2 con Visual Studio Code</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-awsesdocs04_visualcode-li">
+  <input type="checkbox" id="m-awsesdocs04_visualcode-check" checked/>
+  <label for="m-awsesdocs04_visualcode-check"><a href="/aws/es/docs/04_visualcode/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-awsesdocs04_visualcode"><i class="fas fa-terminal"></i><span class="td-sidebar-nav-active-item">Conexión SSH a EC2 con Visual Studio Code</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs01_ec2_bash-li">
   <input type="checkbox" id="m-awsesdocs01_ec2_bash-check"/>
@@ -195,21 +195,27 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/aws/es/_print/docs/00_acceso_curso_lab/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
+<a id="print" href="/aws/es/_print/docs/04_visualcode/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
 
 </div>
 
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#hahahugoshortcode8s0hbhb">HAHAHUGOSHORTCODE8s0HBHB</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#paso-1-accede-la-plataforma">Paso 1: Accede la plataforma</a></li>
-    <li><a href="#-el-entorno-del-laboratorio">▶️ El entorno del laboratorio</a></li>
-    <li><a href="#-paso-3-abre-aws">🔐 Paso 3: Abre AWS</a></li>
-    <li><a href="#img_"><img src="img_9.png" alt="img_9.png"></a></li>
+    <li><a href="#conexión-por-ssh-a-una-instancia-ec2-usando-visual-studio-code">Conexión por SSH a una instancia EC2 usando Visual Studio Code</a>
+      <ul>
+        <li><a href="#1-requisitos-previos">1. Requisitos previos</a></li>
+        <li><a href="#2-instalar-extensión-en-vs-code">2. Instalar extensión en VS Code</a></li>
+        <li><a href="#3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></a></li>
+        <li><a href="#4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</a></li>
+        <li><a href="#5-conectarse-desde-vs-code">5. Conectarse desde VS Code</a></li>
+        <li><a href="#6-primera-conexión">6. Primera conexión</a></li>
+        <li><a href="#7-trabajar-en-la-instancia">7. Trabajar en la instancia</a></li>
+        <li><a href="#8-problemas-comunes">8. Problemas comunes</a></li>
+        <li><a href="#9-comprobación-manual">9. Comprobación manual</a></li>
+        <li><a href="#10-recomendación">10. Recomendación</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -226,164 +232,106 @@
   <li class="breadcrumb-item">
     <a href="/aws/es/docs/">Leaner Lab</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Acceso a Learner Lab</li>
+    Conexión SSH a EC2 con Visual Studio Code</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Acceso a Learner Lab</h1>
-  <div class="lead">Cómo acceder a learner lab</div>
+	<h1>Conexión SSH a EC2 con Visual Studio Code</h1>
+  <div class="lead">Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code</div>
 	<header class="article-meta">
 		
 </header>
-	<h2 id="hahahugoshortcode8s0hbhb">
-
-
-
-
-<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
-    <div style="background-color:darkgreen; color:white;
-    font-weight:bold; padding:10px; display: flex; align-items: center;">
-        
-        <span style="margin-right: 8px;">
-            
-                <i class="fas fa-check-circle"></i> 
-            
-        </span>
-        
-        <span>Objetivos</span>
-    </div>
-
-    <h3 style="padding: 5px; font-weight:bold">Qué veremos aquí</h3>
-
-    <hr style="border-color:seagreen; border-width:3px"/>
-    
-    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
-        <ul>
-            
-            
-            <li>- Acceder al entorno de prácticas de AWS</li>
-                
-            <li>- Comprender cómo iniciar y detener el laboratorio</li>
-                
-            <li>- Identificar los elementos principales del entorno</li>
-                
-            
-            
-        </ul>
-    </div>
-    
-
-
-</div>
-</h2>
-<h1 id="-acceso-rápido-al-laboratorio">🚀 Acceso rápido al laboratorio</h1>
-<p>Sigue estos pasos para entrar en AWS:</p>
-<hr>
-<h2 id="paso-1-accede-la-plataforma">Paso 1: Accede la plataforma</h2>
-<ol>
-<li>
-<p>Entra en la plataforma del curso</p>
-</li>
-<li>
-<p>Busca el módulo de AWS localizando  el enlace del curso:</p>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img.png" alt="img.png"></p>
-</li>
-<li>
-<p>Una vez dentro del curso, accede a los <strong>Módulos</strong></p>
-</li>
-</ol>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_1.png" alt="img_1.png"></p>
-<ol start="6">
-<li>Busca la opción de <strong>Laboratorio para alumnos &hellip;</strong> Presiona en la opción <strong>Lanzamiento &hellip;</strong> ella</li>
-</ol>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_2.png" alt="img_2.png"></p>
-<ol start="8">
-<li>Entonces se abrirá una ventana de <strong>Vocareum</strong> que es una app que gestiona los laboratorios.<br />
-La primara vez que accedas aparecerán los <strong>términos de uso</strong> que obligatoriamente hay que aceptar para poder entrar en el laboratorio.</li>
-</ol>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_3.png" alt="img_3.png"></p>
-<ol start="9">
-<li>Una vez aceptados aparecerá el típico incono de <strong>Vocareum</strong> mientras se carga (son segundos)</li>
-</ol>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_4.png" alt="img_4.png"></p>
-<h2 id="-el-entorno-del-laboratorio">▶️ El entorno del laboratorio</h2>
-<p>El laboratorio tiene una serie de secciones.</p>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_6.png" alt="img_6.png"></p>
-<p>Presionamos Start Lab para arrancar el laboratorio. El proceso puede tardar como 3 minutos</p>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_5.png" alt="img_5.png"></p>
-<p>Durante el procese vemos cómo el color del icono AWS torna amarillo</p>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_7.png" alt="img_7.png"></p>
-<p><strong>Learner Lab</strong></p>
-<blockquote>
-<p>️ El entorno se está preparando automáticamente</p>
-</blockquote>
-<hr>
-<h2 id="-paso-3-abre-aws">🔐 Paso 3: Abre AWS</h2>
-<p>Cuando el laboratorio esté listo:</p>
-<ol>
-<li>Hacemos click en el icono verde AWS y se abre <strong>AWS Console</strong></li>
-</ol>
-<p><img src="/aws/es/docs/00_acceso_curso_lab/img_8.png" alt="img_8.png"></p>
-<p>✔ Se abrirá una nueva pestaña<br>
-✔ Ya estarás autenticado automáticamente</p>
-<h2 id="img_"><img src="/aws/es/docs/00_acceso_curso_lab/img_9.png" alt="img_9.png"></h2>
-<h1 id="cómo-funciona-el-acceso">Cómo funciona el acceso</h1>
-
-
-<div class="alert alert-info" role="alert">
-<h4 class="alert-heading">Importante</h4>
-
-    <ul>
-<li>No necesitas usuario ni contraseña</li>
-<li>El acceso lo gestiona el laboratorio</li>
-<li>Ya tienes permisos configurados</li>
-</ul>
-
-
-</div>
-
-<hr>
-<h1 id="-tiempo-del-laboratorio">️ Tiempo del laboratorio</h1>
-
-
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">Tiempo limitado</h4>
-
-    <ul>
-<li>El laboratorio tiene duración limitada de 4 horas</li>
-<li>Puede detenerse si no se usa</li>
-<li>Guarda tu trabajo frecuentemente</li>
-</ul>
-
-
-</div>
-
-<hr>
-<h1 id="uso-responsable">Uso responsable</h1>
-
-
-<div class="alert alert-success" role="alert">
-<h4 class="alert-heading">Buenas prácticas</h4>
-
-    <ul>
-<li>Usa solo los recursos necesarios</li>
-<li>Borra lo que no utilices</li>
-<li>Sigue las instrucciones de cada práctica</li>
-</ul>
-
-
-</div>
-
-<hr>
-<h1 id="qué-deberías-ver">Qué deberías ver</h1>
-<p>Una vez dentro de AWS:</p>
+	<h2 id="conexión-por-ssh-a-una-instancia-ec2-usando-visual-studio-code">Conexión por SSH a una instancia EC2 usando Visual Studio Code</h2>
+<h3 id="1-requisitos-previos">1. Requisitos previos</h3>
 <ul>
-<li>Consola principal</li>
-<li>Servicios (EC2, S3, Lambda…)</li>
-<li>Región ya configurada</li>
+<li>Tener una instancia EC2 creada en AWS</li>
+<li>Disponer del archivo <code>.pem</code> (clave privada)</li>
+<li>Conocer la IP pública o DNS de la instancia</li>
+<li>Tener instalado:
+<ul>
+<li>Visual Studio Code</li>
+<li>Extensión <strong>Remote - SSH</strong></li>
+</ul>
+</li>
 </ul>
 <hr>
+<h3 id="2-instalar-extensión-en-vs-code">2. Instalar extensión en VS Code</h3>
+<ol>
+<li>Abrir Visual Studio Code</li>
+<li>Ir a <strong>Extensiones</strong> (Ctrl + Shift + X)</li>
+<li>Buscar: <code>Remote - SSH</code></li>
+<li>Instalar la extensión de Microsoft</li>
+</ol>
+<hr>
+<h3 id="3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<hr>
+<h3 id="4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</h3>
+<p>Ruta del fichero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/config</span></span></code></pre></div>
+<p>Configuración:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
+</span></span><span style="display:flex;"><span>HostName IP_PUBLICA_O_DNS
+</span></span><span style="display:flex;"><span>User ubuntu
+</span></span><span style="display:flex;"><span>IdentityFile /ruta/a/mi-clave.pem</span></span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
+</span></span><span style="display:flex;"><span>HostName ec2-54-210-124-155.compute-1.amazonaws.com
+</span></span><span style="display:flex;"><span>User ubuntu
+</span></span><span style="display:flex;"><span>IdentityFile ~/.ssh/mi-clave.pem</span></span></code></pre></div>
+<hr>
+<h3 id="5-conectarse-desde-vs-code">5. Conectarse desde VS Code</h3>
+<ol>
+<li>Abrir la paleta de comandos (<code>Ctrl + Shift + P</code>)</li>
+<li>Ejecutar:
+<ul>
+<li><code>Remote-SSH: Connect to Host</code></li>
+</ul>
+</li>
+<li>Seleccionar:
+<ul>
+<li><code>mi-ec2</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-primera-conexión">6. Primera conexión</h3>
+<ul>
+<li>VS Code instalará el servidor remoto automáticamente</li>
+<li>Aceptar el fingerprint si lo solicita</li>
+<li>Esperar unos segundos</li>
+</ul>
+<hr>
+<h3 id="7-trabajar-en-la-instancia">7. Trabajar en la instancia</h3>
+<ul>
+<li>Abrir carpeta remota:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/www/html</span></span></code></pre></div>
+<ul>
+<li>Editar archivos directamente</li>
+<li>Usar terminal integrada</li>
+</ul>
+<hr>
+<h3 id="8-problemas-comunes">8. Problemas comunes</h3>
+<h4 id="permisos-de-la-clave">Permisos de la clave</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<h4 id="error-de-conexión">Error de conexión</h4>
+<ul>
+<li>Verificar IP pública</li>
+<li>Verificar Security Group (puerto 22 abierto)</li>
+</ul>
+<h4 id="usuario-incorrecto">Usuario incorrecto</h4>
+<ul>
+<li>Ubuntu → <code>ubuntu</code></li>
+<li>Amazon Linux → <code>ec2-user</code></li>
+</ul>
+<hr>
+<h3 id="9-comprobación-manual">9. Comprobación manual</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i mi-clave.pem ubuntu@IP_PUBLICA</span></span></code></pre></div>
+<hr>
+<h3 id="10-recomendación">10. Recomendación</h3>
+<p>Guardar la configuración en <code>~/.ssh/config</code> permite reutilizar conexiones fácilmente y simplifica el acceso desde Visual Studio Code.</p>
 
   <div class="section-index">
     
