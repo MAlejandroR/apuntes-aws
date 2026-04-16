@@ -93,7 +93,18 @@ Para terminar tenemos que ir a políticas y especificar unas políticas para est
 Hay que copiar este fichero json que establece políticas de acceso a este bucket.Debes de especificar el nombre del bucket concreto.En nuestro caso es **2048-aws**, pero modifícalo según sea tu nombre
 
 {{< highlight bash "linenos=inline, hl_lines=, style=emacs" >}}
-
+{
+  "Version": "2012-10-17",
+  "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::2048-aws/*"
+        }
+  ]
+}
 {{< /highlight >}}
 
 

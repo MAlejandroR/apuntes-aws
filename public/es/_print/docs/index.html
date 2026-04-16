@@ -276,6 +276,25 @@ Versión imprimible multipagina.
     </ul>
     
   
+    
+    
+	
+<li>5: <a href="#pg-d18ca09c84372a2ffc98d63f7e64c867">S3</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -2202,6 +2221,211 @@ Ese es nuestro punto de enlace</p>
 
     
 	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d18ca09c84372a2ffc98d63f7e64c867">5 - S3</h1>
+    <div class="lead">Servicio de bukets S3</div>
+	<h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
+<p>Dentro de la consola de AWS accedemos a los servicios de <strong>S3</strong>, y seleccinamos crear un bukets</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img.png" alt="img.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Dejamos las opciones por defecto y asignamos un nombre único al bucket, ya que los nombres en S3 son globales y no pueden repetirse en ninguna cuenta de AWS.</p>
+<p>En nuestro caso asignamos <strong>2048-aws</strong></p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_1.png" alt="img_1.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Acceso público
+
+
+</span>
+</strong>
+
+<p>Como vamos a hacer una web estática, dejamos acceso público el cual hay que confirmar</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_2.png" alt="img_2.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+Con estas opciones seleccionamos crear el bukets
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_3.png" alt="img_3.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<h2 id="subiendo-ficheros">Subiendo ficheros</h2>
+<p>Ahora vamos a subir una web estática que tenemos disponbile en git, que es un sencillo juego de js llamado 2048</p>
+<p>Primero lo podemos clonar en local</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git clone https://github.com/MAlejandroR/2048.git</span></span></code></pre></div>
+<p>Ahora dentro del bucket seleccionamos <strong>Cargar</strong>, que es subir ficheros
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_4.png" alt="img_4.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Dentro de la ventana que nos muestra, tenemos botones para subir ficheros o carpetas</p>
+<p>Para poder acceder posteriormente bien al proyecto es mejor subir el contenido no la carpeta entera, esto implica subir por un lado los ficheros, y por otro, cada una de las carpetas</p>
+<p>Para proceder a la carga definitiva, hay que realizar la acción indicada</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_6.png" alt="img_6.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Al final tendremos todo subido
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_7.png" alt="img_7.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Para hacerlo una web estática, tenemos que ir a propiedades en el dasboard de este bucket</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_8.png" alt="img_8.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Justo en la parte inferior de la página tenemos el acceso a <strong>Web Static</strong>, ahí presionamos editar
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_9.png" alt="img_9.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Simplemente habilitamos y especificamos el nombre del index.html y un fichero en el caso de errores
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_10.png" alt="img_10.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Guardamos cambios</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_11.png" alt="img_11.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Para terminar tenemos que ir a políticas y especificar unas políticas para este web site
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_12.png" alt="img_12.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Hay que copiar este fichero json que establece políticas de acceso a este bucket.Debes de especificar el nombre del bucket concreto.En nuestro caso es <strong>2048-aws</strong>, pero modifícalo según sea tu nombre</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"></code></pre></div>
+<p>Ahora  en el dashboard del S3, copiamos la url (previo selecionamos el index) y podremos acceder a nuestro bucket en la red</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/03_s3/img_13.png" alt="img_13.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
   
 
     
