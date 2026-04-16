@@ -1,45 +1,45 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/aws/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/es/docs/01_ec2_bash/index.xml">
-<link rel="alternate" type="text/html" href="http://localhost:1313/es/_print/docs/01_ec2_bash/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/aws/es/docs/01_ec2_bash/index.xml">
+<link rel="alternate" type="text/html" href="http://localhost:1313/aws/es/_print/docs/01_ec2_bash/">
 <meta name="robots" content="noindex, nofollow">
 
 
-<link rel="shortcut icon" href="/favicons/favicon.ico" >
-<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
-<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
-<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
-<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+<link rel="shortcut icon" href="/aws/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/aws/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/aws/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/aws/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/aws/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/aws/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/aws/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/aws/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/aws/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/aws/favicons/android-192x192.png" sizes="192x192">
 
-<title>Práctica 1: EC2 | Máster de Desarrollo Web</title>
+<title>Crear un shell | Máster de Desarrollo Web</title>
 <meta name="description" content="Crear una EC2 básica y desplegar un Laravel">
 
-<meta property="og:url" content="http://localhost:1313/es/docs/01_ec2_bash/">
+<meta property="og:url" content="http://localhost:1313/aws/es/docs/01_ec2_bash/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
-  <meta property="og:title" content="Práctica 1: EC2">
+  <meta property="og:title" content="Crear un shell">
   <meta property="og:description" content="Crear una EC2 básica y desplegar un Laravel">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Práctica 1: EC2">
+  <meta itemprop="name" content="Crear un shell">
   <meta itemprop="description" content="Crear una EC2 básica y desplegar un Laravel">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="4">
+  <meta itemprop="wordCount" content="759">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Práctica 1: EC2">
+  <meta name="twitter:title" content="Crear un shell">
   <meta name="twitter:description" content="Crear una EC2 básica y desplegar un Laravel">
 
 
-<link href="/scss/main.css" rel="stylesheet">
+<link href="/aws/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -50,8 +50,8 @@
     <header>
       <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row ">
-  <a class="navbar-brand" href="/es/"><span class="navbar-brand__logo navbar-logo">
-    <img src="/images/logo.png" alt="Logo" width="150" height="auto" />
+  <a class="navbar-brand" href="/aws/es/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/aws/images/logo.png" alt="Logo" width="150" height="auto" />
     </span><span class="navbar-brand__name">Máster de Desarrollo Web</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
@@ -59,8 +59,8 @@
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/en/">English</a></li>
-    <li><a class="dropdown-item" href="/fr/">Francés</a></li>
+    <li><a class="dropdown-item" href="/aws/en/">English</a></li>
+    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     </ul>
 </div></li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -138,38 +138,42 @@
       <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/en/">English</a></li>
-    <li><a class="dropdown-item" href="/fr/">Francés</a></li>
+    <li><a class="dropdown-item" href="/aws/en/">English</a></li>
+    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
     </ul>
 </div>
     </div>
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-esdocs-li">
-  <a href="/es/docs/" title="Laboratorio de Prácticas " class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-esdocs"><i class="fa-brands fa-aws"></i><span class="">Leaner Lab</span></a>
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-awsesdocs-li">
+  <a href="/aws/es/docs/" title="Laboratorio de Prácticas " class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-awsesdocs"><i class="fa-brands fa-aws"></i><span class="">Leaner Lab</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-esdocs00_acceso_curso_lab-li">
-  <input type="checkbox" id="m-esdocs00_acceso_curso_lab-check"/>
-  <label for="m-esdocs00_acceso_curso_lab-check"><a href="/es/docs/00_acceso_curso_lab/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs00_acceso_curso_lab"><i class="fas fa-sign-in-alt"></i><span class="">Acceso a Learner Lab</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs00_acceso_curso_lab-li">
+  <input type="checkbox" id="m-awsesdocs00_acceso_curso_lab-check"/>
+  <label for="m-awsesdocs00_acceso_curso_lab-check"><a href="/aws/es/docs/00_acceso_curso_lab/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs00_acceso_curso_lab"><i class="fas fa-sign-in-alt"></i><span class="">Acceso a Learner Lab</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-esdocs01_ec2-li">
-  <input type="checkbox" id="m-esdocs01_ec2-check"/>
-  <label for="m-esdocs01_ec2-check"><a href="/es/docs/01_ec2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2"><i class="fas fa-server"></i><span class="">Práctica 1: EC2</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-awsesdocs01_ec2-li">
+  <input type="checkbox" id="m-awsesdocs01_ec2-check"/>
+  <label for="m-awsesdocs01_ec2-check"><a href="/aws/es/docs/01_ec2/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs01_ec2"><i class="fas fa-server"></i><span class="">Práctica 1: EC2</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-esdocs01_ec2configurar-li">
-  <input type="checkbox" id="m-esdocs01_ec2configurar-check"/>
-  <label for="m-esdocs01_ec2configurar-check"><a href="/es/docs/01_ec2/configurar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2configurar"><i class="fas fa-cogs"></i><span class="">Instalaciones en  EC2</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs01_ec2configurar-li">
+  <input type="checkbox" id="m-awsesdocs01_ec2configurar-check"/>
+  <label for="m-awsesdocs01_ec2configurar-check"><a href="/aws/es/docs/01_ec2/configurar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs01_ec2configurar"><i class="fas fa-cogs"></i><span class="">Instalaciones en  EC2</span></a></label>
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-esdocs01_ec2_bash-li">
-  <input type="checkbox" id="m-esdocs01_ec2_bash-check" checked/>
-  <label for="m-esdocs01_ec2_bash-check"><a href="/es/docs/01_ec2_bash/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2_bash"><i class="fas fa-server"></i><span class="td-sidebar-nav-active-item">Práctica 1: EC2</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-awsesdocs01_ec2_bash-li">
+  <input type="checkbox" id="m-awsesdocs01_ec2_bash-check" checked/>
+  <label for="m-awsesdocs01_ec2_bash-check"><a href="/aws/es/docs/01_ec2_bash/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-awsesdocs01_ec2_bash"><i class="fas fa-terminal"></i><span class="td-sidebar-nav-active-item">Crear un shell</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-awsesdocs03_rds-li">
+  <input type="checkbox" id="m-awsesdocs03_rds-check"/>
+  <label for="m-awsesdocs03_rds-check"><a href="/aws/es/docs/03_rds/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs03_rds"><i class="fas fa-database"></i><span class="">RDS Bases de datos</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-esdocs01_ec2_bashconfigurar-li">
-  <input type="checkbox" id="m-esdocs01_ec2_bashconfigurar-check"/>
-  <label for="m-esdocs01_ec2_bashconfigurar-check"><a href="/es/docs/01_ec2_bash/configurar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-esdocs01_ec2_bashconfigurar"><i class="fas fa-cogs"></i><span class="">Instalaciones en  EC2</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-awsesdocs03_rdsacceder-li">
+  <input type="checkbox" id="m-awsesdocs03_rdsacceder-check"/>
+  <label for="m-awsesdocs03_rdsacceder-check"><a href="/aws/es/docs/03_rds/acceder/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-awsesdocs03_rdsacceder"><i class="fas fa-server"></i><span class="">Acceso a RDS</span></a></label>
   
 </li>
   </ul>
@@ -183,11 +187,19 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a id="print" href="/es/_print/docs/01_ec2_bash/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
+<a id="print" href="/aws/es/_print/docs/01_ec2_bash/"><i class="fa-solid fa-print fa-fw"></i> Imprimir la sección entera</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#incluir-un-bash-de-usuario">Incluir un bash de usuario</a></li>
+    <li><a href="#crear-la-instancia-con-bash">Crear la instancia con bash</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 
           </aside>
@@ -198,64 +210,229 @@
             <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="/es/docs/">Leaner Lab</a></li>
+    <a href="/aws/es/docs/">Leaner Lab</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Práctica 1: EC2</li>
+    Crear un shell</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Práctica 1: EC2</h1>
+	<h1>Crear un shell</h1>
   <div class="lead">Crear una EC2 básica y desplegar un Laravel</div>
 	<header class="article-meta">
 		
 </header>
-	
+	<h2 id="incluir-un-bash-de-usuario">Incluir un bash de usuario</h2>
+<p>Consiste en recoger todas las acciones anteriores y generar un script bash para automatizar la configuración de nuestra EC2.</p>
+<p>Otra opción sería crear una AMI a partir de una instancia ya configurada.</p>
+<p>Vamos a ir copiando las acciones indicadas, pero antes unos comentarios</p>
+<hr>
+<p>Debemos indicar al inicio que se trata de un script bash:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080;font-style:italic">#!/bin/bash</span></span></span></code></pre></div>
+<p>También es recomendable guardar toda la salida que genere el script (mensaje de las accione realizadas o mensajes de error) en un fichero de log:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a2f">exec</span> &gt; /var/log/user-data.log 2&gt;&amp;<span style="color:#666">1</span></span></span></code></pre></div>
+<ul>
+<li><strong>2&gt;&amp;1</strong> especifica que los mensajes de error sean reconducidos al standar de salida</li>
+</ul>
+<hr>
+<p>Añadimos mensajes para facilitar la lectura del proceso de la intencción que se va a realizar a continuación:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE PHP Y APACHE2 =====================\n&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;</span></span></code></pre></div>
+<hr>
+<p>Una acción complicada es automatizar la modifcacion de un fichero.</p>
+<p>En este caso lo que haremos será escribir en el fichero todo lo que necesitemos con la redireccioń <strong>&gt;</strong></p>
+<p>Por ejemplo escribir <strong>Hola</strong> y guardarlo en un fichero llamado <strong>saludo.txt</strong>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Hola &#34;</span>&gt; saludo.txt </span></span></code></pre></div></p>
+<p>Igualemnte y sol por curiosidad, podemos poner marcas de tiempo para saber cuánto tarda en ejecutarse el script
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#080;font-style:italic"># Inicio</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#b8860b">inicio</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>date +%s<span style="color:#a2f;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Inicio del script: </span><span style="color:#a2f;font-weight:bold">$(</span>date<span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#080;font-style:italic"># .... El resto del script</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#b8860b">fin</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>date +%s<span style="color:#a2f;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Fin del script: </span><span style="color:#a2f;font-weight:bold">$(</span>date<span style="color:#a2f;font-weight:bold">)</span><span style="color:#b44">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#080;font-style:italic"># Cálculo</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#b8860b">duracion</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>fin <span style="color:#666">-</span> inicio<span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#b8860b">minutos</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>duracion <span style="color:#666">/</span> <span style="color:#666">60</span><span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#b8860b">segundos</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>duracion <span style="color:#666">%</span> <span style="color:#666">60</span><span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Tiempo total: </span><span style="color:#b8860b">$minutos</span><span style="color:#b44"> minutos y </span><span style="color:#b8860b">$segundos</span><span style="color:#b44"> segundos&#34;</span></span></span></code></pre></div>
+En el proceso de instalación y verificación se ha detectado un problema con Composer relacionado con la variable de entorno <strong>HOME</strong>, que es necesario definir explícitamente.</p>
+<p>Igualmente, Composer muestra una advertencia al ejecutarse como superusuario (root), ya que por seguridad desactiva los plugins en entornos no interactivos.</p>
+<p>Para permitir su ejecución correcta en este contexto (script de User Data), debemos añadir las siguientes variables de entorno antes de ejecutar Composer:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">HOME</span><span style="color:#666">=</span>/root
+</span></span><span style="display:flex;"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">COMPOSER_ALLOW_SUPERUSER</span><span style="color:#666">=</span><span style="color:#666">1</span></span></span></code></pre></div>
+<hr>
+<p>Otro problema detectado, es que cuando ejectuamos las migraciones en laravel usando sqlite, si no existe el fichero que almacena los datos, laravel, de forma interactiva, nos pide confirmación para crearlo.
+Como aquí no vamos a poder interactuar con el script, creamos previamente el fichero con el comando <strong>touch</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>touch database/database.sqlite</span></span></code></pre></div>
+<p>Igualemnte cuando está, como es el caso, en modo producción, pide confirmación para ejecutar las migraciones, tomando por defecto el valor no</p>
+<p>Una opción es forzar la migración sin pedir confirmación</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>php artisan migrate --seed --force</span></span></code></pre></div>
+<p>Con todo esto empezamos a reescribir todas las acciones</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">exec</span> &gt; /var/log/user-data.log 2&gt;&amp;<span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">inicio</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>date +%s<span style="color:#a2f;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE PHP, APACHE2 y LIBRERÍAS============\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt update
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt install -y php apache2 libapache2-mod-php
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE COMPOSER =====================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">HOME</span><span style="color:#666">=</span>/root
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">COMPOSER_ALLOW_SUPERUSER</span><span style="color:#666">=</span><span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>curl https://getcomposer.org/installer -o composer.phar
+</span></span><span style="display:flex;"><span>sudo php composer.phar --install-dir<span style="color:#666">=</span>/usr/local/bin --filename<span style="color:#666">=</span>composer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE NODE =====================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>curl https://deb.nodesource.com/setup_24.x -o node.sh
+</span></span><span style="display:flex;"><span>sudo -E bash ./node.sh
+</span></span><span style="display:flex;"><span>sudo apt install -y nodejs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============CLONAR EL PROYECTO LARAVEL =====================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">cd</span> /var/www/html
+</span></span><span style="display:flex;"><span>git clone https://github.com/MAlejandroR/laravel_aws.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============ORQUETAR, ASSETS, MIGRACIONES, links =====================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">cd</span> /var/www/html/laravel_aws
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>composer update
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>npm install
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>npm run build
+</span></span><span style="display:flex;"><span>touch database/database.sqlite
+</span></span><span style="display:flex;"><span>php artisan migrate --seed --force
+</span></span><span style="display:flex;"><span>php artisan storage:link
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============DAR PERMISOS A CARPETAS DEL PROYECTO ==============\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo chown -R ubuntu:www-data /var/www/html/laravel_aws
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/storage -R
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/database/database.sqlite -R
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># Para las sesiones necesitamos permisos explícitos para www-data</span>
+</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/www/html/laravel_aws/storage bootstrap/cache
+</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#666">775</span> storage /var/www/html/laravel_aws/bootstrap/cache
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n&#34;</span>;
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>cat &gt; /etc/apache2/sites-available/000-default.conf <span style="color:#b44">&lt;&lt;EOF
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">    &lt;VirtualHost *:80&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        ServerAdmin webmaster@localhost
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        DocumentRoot /var/www/html/laravel_aws/public
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        &lt;Directory /var/www/html/laravel_aws/public&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            AllowOverride All
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            Require all granted
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">        &lt;/Directory&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">            ErrorLog \${APACHE_LOG_DIR}/error.log
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">            CustomLog \${APACHE_LOG_DIR}/access.log combined
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">    &lt;/VirtualHost&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#b44">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============HABILITAR EL MODO REWRITE Y REBOTAR EL SERVICIO ==============\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span>sudo a2enmod rewrite
+</span></span><span style="display:flex;"><span>sudo systemctl restart apache2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">fin</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>date +%s<span style="color:#a2f;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">duracion</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>fin <span style="color:#666">-</span> inicio<span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">minutos</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>duracion <span style="color:#666">/</span> <span style="color:#666">60</span><span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">segundos</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$((</span>duracion <span style="color:#666">%</span> <span style="color:#666">60</span> <span style="color:#a2f;font-weight:bold">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=======FIN SCRIPT===============\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">echo</span> <span style="color:#b44">&#34;Tiempo total: </span><span style="color:#b8860b">$minutos</span><span style="color:#b44"> minutos y </span><span style="color:#b8860b">$segundos</span><span style="color:#b44"> segundos&#34;</span></span></span></code></pre></div>
+<h2 id="crear-la-instancia-con-bash">Crear la instancia con bash</h2>
+<p>Ahora, siguiendo la práctica anterior, volvemos a crear una ec2, con los mismos parámetros, y accdedmos a la última sección, <strong>Detalles avanzados</strong>
 
 
 
+<hr style="border: none; border-top: 5px solid green;">
 
-<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
-    <div style="background-color:darkgreen; color:white;
-    font-weight:bold; padding:10px; display: flex; align-items: center;">
-        
-        <span style="margin-right: 8px;">
-            
-                <i class="fas fa-check-circle"></i> 
-            
-        </span>
-        
-        <span>Objetivos</span>
-    </div>
-
-    <h3 style="padding: 5px; font-weight:bold">Qué veremos aquí</h3>
-
-    <hr style="border-color:seagreen; border-width:3px"/>
-    
-    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
-        <ul>
-            
-            
-            
-        </ul>
-    </div>
-    
+<img src="/aws/es/docs/01_ec2_bash/img.png" alt="img.png"><br>
 
 
-</div>
 
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Buscamos la última opción y copiamos ahí el script
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/01_ec2_bash/img_1.png" alt="img_1.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Opcionalmente lo podríamos cargar desde un fichero</p>
+<p>Apretamos lanzar instancia</p>
+<p>
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/01_ec2_bash/img_2.png" alt="img_2.png">
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>La instancia se crea rápidamente,
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/01_ec2_bash/img_3.png" alt="img_3.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>El script tarda un poco en ejecutarse, por lo que la instancia estará en estado inicializándose
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+
+<img src="/aws/es/docs/01_ec2_bash/img_4.png" alt="img_4.png"><br>
+
+
+
+<hr style="border: none; border-top: 5px solid green;">
+</p>
+<p>Podemos entrar en la instanci y ver cómo el fichero de log está ejecutando las acciones</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ssh -i labsuser.pem ubuntu@La_ip_publica_de nuestra_instancia
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>tail -f /var/log/user-data.log</span></span></code></pre></div>
 
   <div class="section-index">
     
     
-    <hr class="panel-line">
-        <div class="entry">
-                <h5>
-                    <a href="/es/docs/01_ec2_bash/configurar/">Instalaciones en  EC2</a>
-                </h5>
-                <p>Trabajar con la EC2</p>
-            </div>
-        </div>
+    </div>
 </div>
 
           </main>
@@ -293,10 +470,10 @@
 </footer>
 
     </div>
-    <script src='/js/deflate.js'></script>
-<script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
-<script src='/js/tabpane-persist.js'></script>
+    <script src='/aws/js/deflate.js'></script>
+<script src="/aws/js/main.js"></script>
+<script defer src="/aws/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/aws/js/tabpane-persist.js'></script>
 
   </body>
 </html>

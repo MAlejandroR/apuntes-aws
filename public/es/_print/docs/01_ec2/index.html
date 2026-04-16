@@ -1,28 +1,28 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/aws/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/es/docs/01_ec2/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/es/docs/01_ec2/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/aws/es/docs/01_ec2/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/aws/es/docs/01_ec2/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
-<link rel="shortcut icon" href="/favicons/favicon.ico" >
-<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
-<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
-<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
-<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+<link rel="shortcut icon" href="/aws/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/aws/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/aws/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/aws/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/aws/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/aws/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/aws/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/aws/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/aws/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/aws/favicons/android-192x192.png" sizes="192x192">
 
 <title>Práctica 1: EC2 | Máster de Desarrollo Web</title>
 <meta name="description" content="Crear una EC2 básica y desplegar un Laravel">
 
-<meta property="og:url" content="http://localhost:1313/es/docs/01_ec2/">
+<meta property="og:url" content="http://localhost:1313/aws/es/docs/01_ec2/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
   <meta property="og:title" content="Práctica 1: EC2">
   <meta property="og:description" content="Crear una EC2 básica y desplegar un Laravel">
@@ -39,7 +39,7 @@
   <meta name="twitter:description" content="Crear una EC2 básica y desplegar un Laravel">
 
 
-<link href="/scss/main.css" rel="stylesheet">
+<link href="/aws/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -50,8 +50,8 @@
     <header>
       <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row ">
-  <a class="navbar-brand" href="/es/"><span class="navbar-brand__logo navbar-logo">
-    <img src="/images/logo.png" alt="Logo" width="150" height="auto" />
+  <a class="navbar-brand" href="/aws/es/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/aws/images/logo.png" alt="Logo" width="150" height="auto" />
     </span><span class="navbar-brand__name">Máster de Desarrollo Web</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
@@ -59,8 +59,8 @@
         <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Español</a>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/en/">English</a></li>
-    <li><a class="dropdown-item" href="/fr/">Francés</a></li>
+    <li><a class="dropdown-item" href="/aws/fr/">Francés</a></li>
+    <li><a class="dropdown-item" href="/aws/en/">English</a></li>
     </ul>
 </div></li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -138,7 +138,7 @@
 Versión imprimible multipagina.
 <a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
 </p><p>
-<a href="/es/docs/01_ec2/">Volver a la vista normal de esta página</a>.
+<a href="/aws/es/docs/01_ec2/">Volver a la vista normal de esta página</a>.
 </p>
 </div>
 
@@ -291,7 +291,7 @@ Para ello realizaremos las siguientes acciones:
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/Servicio_ec2.png" alt="Servicio_ec2.png">
+<img src="/aws/es/docs/01_ec2/Servicio_ec2.png" alt="Servicio_ec2.png">
 
 
 
@@ -304,7 +304,7 @@ Para ello realizaremos las siguientes acciones:
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/Ec2_pagina_opciones.png" alt="Servicio_pagina_opciones.png"></li>
+<img src="/aws/es/docs/01_ec2/Ec2_pagina_opciones.png" alt="Servicio_pagina_opciones.png"></li>
 </ol>
 <ul>
 <li>
@@ -323,7 +323,7 @@ Instance”. Lo podemos encontrar en esta página de la EC2
  
  <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_1.png" alt="img_1.png"></p>
+<img src="/aws/es/docs/01_ec2/img_1.png" alt="img_1.png"></p>
 </li>
 </ol>
 <ul>
@@ -359,7 +359,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_2.png" alt="img_2.png">
+<img src="/aws/es/docs/01_ec2/img_2.png" alt="img_2.png">
 
 
 
@@ -386,7 +386,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_3.png" alt="img_3.png">
+<img src="/aws/es/docs/01_ec2/img_3.png" alt="img_3.png">
 
 
 
@@ -413,7 +413,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 </span>
 </strong>
 
-<p><img src="/es/docs/01_ec2/img_7.png" alt="img_7.png"></p>
+<p><img src="/aws/es/docs/01_ec2/img_7.png" alt="img_7.png"></p>
 <p>En nuestro caso, vamos a crear una instancia de tipo t3.micro, que cuenta con 1 vCPU y 1 GiB de RAM.</p>
 <p>Más que suficiente para nuestro objetivo.</p>
 <p>
@@ -421,7 +421,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_4.png" alt="img_4.png"><br>
+<img src="/aws/es/docs/01_ec2/img_4.png" alt="img_4.png"><br>
 
 
 
@@ -455,7 +455,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_5.png" alt="img_5.png">
+<img src="/aws/es/docs/01_ec2/img_5.png" alt="img_5.png">
 
 
 
@@ -488,7 +488,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_6.png" alt="img_6.png">
+<img src="/aws/es/docs/01_ec2/img_6.png" alt="img_6.png">
 
 
 
@@ -509,7 +509,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 <p>En este ejemplo vamos a modificar el tamaño del disco y utilizaremos un volumen SSD de 16 GB. EBS es el disco duro de la máquina; EFS o S3 serían almacenamientos externos.</p>
 <hr>
 <p>Recientemente también tenemos la posibilidad de añadir sistemas de almacenamiento adicionales (como EFS o S3), que permiten guardar datos fuera de la propia instancia.</p>
-<p><img src="/es/docs/01_ec2/img_8.png" alt="opcion para seleccionar sistemas de archivos"></p>
+<p><img src="/aws/es/docs/01_ec2/img_8.png" alt="opcion para seleccionar sistemas de archivos"></p>
 <hr>
 <p>Para nuestro objetivo elegimos 16 GB, ya que vamos a gestionar imágenes (por ejemplo, los avatares de los usuarios), lo que nos proporciona un espacio holgado para nuestra aplicación.</p>
 <p>
@@ -517,7 +517,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_9.png" alt="img_9.png">
+<img src="/aws/es/docs/01_ec2/img_9.png" alt="img_9.png">
 
 
 
@@ -544,9 +544,9 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_10.png" alt="img_10.png"></p>
-<p><img src="/es/docs/01_ec2/img_11.png" alt="img_11.png"></p>
-<p><img src="/es/docs/01_ec2/img_12.png" alt="img_12.png">
+<img src="/aws/es/docs/01_ec2/img_10.png" alt="img_10.png"></p>
+<p><img src="/aws/es/docs/01_ec2/img_11.png" alt="img_11.png"></p>
+<p><img src="/aws/es/docs/01_ec2/img_12.png" alt="img_12.png">
 
 
 
@@ -573,7 +573,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/img_13.png" alt="img_13.png">
+<img src="/aws/es/docs/01_ec2/img_13.png" alt="img_13.png">
 
 
 
@@ -585,8 +585,8 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<h2 id="img_"><img src="/es/docs/01_ec2/img_14.png" alt="img_14.png"></h2>
-<p><img src="/es/docs/01_ec2/img_15.png" alt="img_15.png">
+<h2 id="img_"><img src="/aws/es/docs/01_ec2/img_14.png" alt="img_14.png"></h2>
+<p><img src="/aws/es/docs/01_ec2/img_15.png" alt="img_15.png">
 
 
 
@@ -615,7 +615,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
     
 	<h1 id="pg-fd256c555a2dd32929131e608db5e6d1">1 - Instalaciones en  EC2</h1>
     <div class="lead">Trabajar con la EC2</div>
-	<h2 id="hahahugoshortcode66s0hbhb">
+	<h2 id="hahahugoshortcode13s0hbhb">
 
 
 
@@ -678,7 +678,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/img.png" alt="img.png">
+<img src="/aws/es/docs/01_ec2/configurar/img.png" alt="img.png">
 
 
 
@@ -691,7 +691,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/img_1.png" alt="img_1.png">
+<img src="/aws/es/docs/01_ec2/configurar/images/img_1.png" alt="img_1.png">
 
 
 
@@ -712,7 +712,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/img_1.png" alt="img_1.png">
+<img src="/aws/es/docs/01_ec2/configurar/img_1.png" alt="img_1.png">
 
 
 
@@ -758,7 +758,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/AWS_Details_select.png" alt="AWS_Details_select.png">
+<img src="/aws/es/docs/01_ec2/configurar/images/AWS_Details_select.png" alt="AWS_Details_select.png">
 
 
 
@@ -769,7 +769,7 @@ casos dejaremos la opción por defecto, pero las vamos comentando. Vamos a confi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/ventana_PPK_PEM.png" alt="ventana_PPK_PEM.png">
+<img src="/aws/es/docs/01_ec2/configurar/images/ventana_PPK_PEM.png" alt="ventana_PPK_PEM.png">
 
 
 
@@ -849,7 +849,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/img_2.png" alt="img_2.png">
+<img src="/aws/es/docs/01_ec2/configurar/images/img_2.png" alt="img_2.png">
 
 
 
@@ -904,7 +904,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/fingerprint_question.png" alt="img_2.png">
+<img src="/aws/es/docs/01_ec2/configurar/images/fingerprint_question.png" alt="img_2.png">
 
 
 
@@ -917,7 +917,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/conexion_ssh_ok.png" alt="Mensaje conexión ssh ok">
+<img src="/aws/es/docs/01_ec2/configurar/images/conexion_ssh_ok.png" alt="Mensaje conexión ssh ok">
 
 
 
@@ -978,7 +978,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/composer_version.png" alt="Ver versión de composer">
+<img src="/aws/es/docs/01_ec2/configurar/images/composer_version.png" alt="Ver versión de composer">
 
 
 
@@ -1009,7 +1009,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/node_npm_version.png" alt="Ver versión de node y de npm">
+<img src="/aws/es/docs/01_ec2/configurar/images/node_npm_version.png" alt="Ver versión de node y de npm">
 
 
 
@@ -1035,7 +1035,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/permisos_var_www.png" alt="propietario carpetas /var/www"><br>
+<img src="/aws/es/docs/01_ec2/configurar/images/permisos_var_www.png" alt="propietario carpetas /var/www"><br>
 
 
 
@@ -1062,7 +1062,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/carpeta_clonada_git.png" alt="Capeta clonada de git">
+<img src="/aws/es/docs/01_ec2/configurar/images/carpeta_clonada_git.png" alt="Capeta clonada de git">
 
 
 
@@ -1102,7 +1102,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/confirmacion_execute_migration_produccion.png" alt="confirmacion_execute_migration_produccion"><br>
+<img src="/aws/es/docs/01_ec2/configurar/images/confirmacion_execute_migration_produccion.png" alt="confirmacion_execute_migration_produccion"><br>
 
 
 
@@ -1116,7 +1116,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/images/confirmacion_create_sqlite_file.png" alt="confirmacion_create_sqlite_file"><br>
+<img src="/aws/es/docs/01_ec2/configurar/images/confirmacion_create_sqlite_file.png" alt="confirmacion_create_sqlite_file"><br>
 
 
 
@@ -1173,7 +1173,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/img_4.png" alt="img_4.png"><br>
+<img src="/aws/es/docs/01_ec2/configurar/img_4.png" alt="img_4.png"><br>
 
 
 
@@ -1190,7 +1190,7 @@ Formato de clave privada específico de PuTTY (Windows), equivalente al PEM.</p>
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/img_6.png" alt="img_6.png">
+<img src="/aws/es/docs/01_ec2/configurar/img_6.png" alt="img_6.png">
 
 
 
@@ -1234,7 +1234,7 @@ El módulo <strong>rewrite</strong> permite redirigir todas las peticiones al fi
 
 <hr style="border: none; border-top: 5px solid green;">
 
-<img src="/es/docs/01_ec2/configurar/img_5.png" alt="img_5.png"><br>
+<img src="/aws/es/docs/01_ec2/configurar/img_5.png" alt="img_5.png"><br>
 
 
 
@@ -1298,10 +1298,10 @@ El módulo <strong>rewrite</strong> permite redirigir todas las peticiones al fi
 </footer>
 
     </div>
-    <script src='/js/deflate.js'></script>
-<script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
-<script src='/js/tabpane-persist.js'></script>
+    <script src='/aws/js/deflate.js'></script>
+<script src="/aws/js/main.js"></script>
+<script defer src="/aws/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/aws/js/tabpane-persist.js'></script>
 
   </body>
 </html>

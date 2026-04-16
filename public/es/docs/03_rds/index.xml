@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDS Bases de datos on Máster de Desarrollo Web</title>
+    <link>http://localhost:1313/aws/es/docs/03_rds/</link>
+    <description>Recent content in RDS Bases de datos on Máster de Desarrollo Web</description>
+    <generator>Hugo</generator>
+    <language>es-es</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/aws/es/docs/03_rds/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
