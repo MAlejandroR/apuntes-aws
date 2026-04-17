@@ -222,7 +222,7 @@ Versión imprimible multipagina.
     
     
 	
-<li>3: <a href="#pg-8df25f52e6cf39b6139359075d51a6d8">Conexión SSH a EC2 con Visual Studio Code</a></li>
+<li>3: <a href="#pg-1f46899a83a080128e5ea2f914889909">Crear un shell</a></li>
 
 
     
@@ -241,26 +241,7 @@ Versión imprimible multipagina.
     
     
 	
-<li>4: <a href="#pg-1f46899a83a080128e5ea2f914889909">Crear un shell</a></li>
-
-
-    
-    <ul>
-        
-  
-  
-  
-  
-
-  
-
-    </ul>
-    
-  
-    
-    
-	
-<li>5: <a href="#pg-fb6f68f020d2909514afbff7f3e37610">RDS Bases de datos</a></li>
+<li>4: <a href="#pg-fb6f68f020d2909514afbff7f3e37610">RDS Bases de datos</a></li>
 
 
     
@@ -275,7 +256,7 @@ Versión imprimible multipagina.
     
     
 	
-<li>5.1: <a href="#pg-b32f00d066cb0754645b9ece11a2ecd5">Acceso a RDS</a></li>
+<li>4.1: <a href="#pg-b32f00d066cb0754645b9ece11a2ecd5">Acceso a RDS</a></li>
 
 
     
@@ -298,7 +279,26 @@ Versión imprimible multipagina.
     
     
 	
-<li>6: <a href="#pg-d18ca09c84372a2ffc98d63f7e64c867">S3</a></li>
+<li>5: <a href="#pg-d18ca09c84372a2ffc98d63f7e64c867">S3</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-8df25f52e6cf39b6139359075d51a6d8">Conexión SSH Visual</a></li>
 
 
     
@@ -1745,126 +1745,7 @@ El módulo <strong>rewrite</strong> permite redirigir todas las peticiones al fi
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8df25f52e6cf39b6139359075d51a6d8">3 - Conexión SSH a EC2 con Visual Studio Code</h1>
-    <div class="lead">Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code</div>
-	<h2 id="conexión-por-ssh-a-una-instancia-ec2-usando-visual-studio-code">Conexión por SSH a una instancia EC2 usando Visual Studio Code</h2>
-<h3 id="1-requisitos-previos">1. Requisitos previos</h3>
-<ul>
-<li>Tener una instancia EC2 creada en AWS</li>
-<li>Disponer del archivo <code>.pem</code> (clave privada)</li>
-<li>Conocer la IP pública o DNS de la instancia</li>
-<li>Tener instalado:
-<ul>
-<li>Visual Studio Code</li>
-<li>Extensión <strong>Remote - SSH</strong></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="2-instalar-extensión-en-vs-code">2. Instalar extensión en VS Code</h3>
-<ol>
-<li>Abrir Visual Studio Code</li>
-<li>Ir a <strong>Extensiones</strong> (Ctrl + Shift + X)</li>
-<li>Buscar: <code>Remote - SSH</code></li>
-<li>Instalar la extensión de Microsoft</li>
-</ol>
-<hr>
-<h3 id="3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
-<hr>
-<h3 id="4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</h3>
-<p>Ruta del fichero:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/config</span></span></code></pre></div>
-<p>Configuración:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
-</span></span><span style="display:flex;"><span>HostName IP_PUBLICA_O_DNS
-</span></span><span style="display:flex;"><span>User ubuntu
-</span></span><span style="display:flex;"><span>IdentityFile /ruta/a/mi-clave.pem</span></span></code></pre></div>
-<p>Ejemplo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
-</span></span><span style="display:flex;"><span>HostName ec2-54-210-124-155.compute-1.amazonaws.com
-</span></span><span style="display:flex;"><span>User ubuntu
-</span></span><span style="display:flex;"><span>IdentityFile ~/.ssh/mi-clave.pem</span></span></code></pre></div>
-<hr>
-<h3 id="5-conectarse-desde-vs-code">5. Conectarse desde VS Code</h3>
-<ol>
-<li>Abrir la paleta de comandos (<code>Ctrl + Shift + P</code>)</li>
-<li>Ejecutar:
-<ul>
-<li><code>Remote-SSH: Connect to Host</code></li>
-</ul>
-</li>
-<li>Seleccionar:
-<ul>
-<li><code>mi-ec2</code></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="6-primera-conexión">6. Primera conexión</h3>
-<ul>
-<li>VS Code instalará el servidor remoto automáticamente</li>
-<li>Aceptar el fingerprint si lo solicita</li>
-<li>Esperar unos segundos</li>
-</ul>
-<hr>
-<h3 id="7-trabajar-en-la-instancia">7. Trabajar en la instancia</h3>
-<ul>
-<li>Abrir carpeta remota:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/www/html</span></span></code></pre></div>
-<ul>
-<li>Editar archivos directamente</li>
-<li>Usar terminal integrada</li>
-</ul>
-<hr>
-<h3 id="8-problemas-comunes">8. Problemas comunes</h3>
-<h4 id="permisos-de-la-clave">Permisos de la clave</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
-<h4 id="error-de-conexión">Error de conexión</h4>
-<ul>
-<li>Verificar IP pública</li>
-<li>Verificar Security Group (puerto 22 abierto)</li>
-</ul>
-<h4 id="usuario-incorrecto">Usuario incorrecto</h4>
-<ul>
-<li>Ubuntu → <code>ubuntu</code></li>
-<li>Amazon Linux → <code>ec2-user</code></li>
-</ul>
-<hr>
-<h3 id="9-comprobación-manual">9. Comprobación manual</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i mi-clave.pem ubuntu@IP_PUBLICA</span></span></code></pre></div>
-<hr>
-<h3 id="10-recomendación">10. Recomendación</h3>
-<p>Guardar la configuración en <code>~/.ssh/config</code> permite reutilizar conexiones fácilmente y simplifica el acceso desde Visual Studio Code.</p>
-
-</div>
-
-
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-1f46899a83a080128e5ea2f914889909">4 - Crear un shell</h1>
+	<h1 id="pg-1f46899a83a080128e5ea2f914889909">3 - Crear un shell</h1>
     <div class="lead">Crear una EC2 básica y desplegar un Laravel</div>
 	<h2 id="incluir-un-bash-de-usuario">Incluir un bash de usuario</h2>
 <p>Consiste en recoger todas las acciones anteriores y generar un script bash para automatizar la configuración de nuestra EC2.</p>
@@ -2099,7 +1980,7 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-fb6f68f020d2909514afbff7f3e37610">5 - RDS Bases de datos</h1>
+	<h1 id="pg-fb6f68f020d2909514afbff7f3e37610">4 - RDS Bases de datos</h1>
     <div class="lead">Crear servicios de BD</div>
 	<h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
 <p>Dentro de la consola de AWS accedemos a los servicios de <strong>bases de datos</strong> y seleccionamos <strong>Amazon RDS</strong>.</p>
@@ -2277,7 +2158,7 @@ El resto de opciones las dejamos por defecto y vamos a <strong>Configuración ad
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b32f00d066cb0754645b9ece11a2ecd5">5.1 - Acceso a RDS</h1>
+	<h1 id="pg-b32f00d066cb0754645b9ece11a2ecd5">4.1 - Acceso a RDS</h1>
     <div class="lead">Acceder a la bd</div>
 	<h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
 <p>Lo primero que necesitamos el el punto de acceso</p>
@@ -2371,7 +2252,7 @@ Ese es nuestro punto de enlace</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-d18ca09c84372a2ffc98d63f7e64c867">6 - S3</h1>
+	<h1 id="pg-d18ca09c84372a2ffc98d63f7e64c867">5 - S3</h1>
     <div class="lead">Servicio de bukets S3</div>
 	<h2 id="acceder-a-los-servicios">Acceder a los servicios</h2>
 <p>Dentro de la consola de AWS accedemos a los servicios de <strong>S3</strong>, y seleccinamos crear un bukets</p>
@@ -2560,6 +2441,125 @@ Con estas opciones seleccionamos crear el bukets
 
 <hr style="border: none; border-top: 5px solid green;">
 </p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-8df25f52e6cf39b6139359075d51a6d8">6 - Conexión SSH Visual</h1>
+    <div class="lead">Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code</div>
+	<h2 id="conexión-por-ssh-a-una-instancia-ec2-usando-visual-studio-code">Conexión por SSH a una instancia EC2 usando Visual Studio Code</h2>
+<h3 id="1-requisitos-previos">1. Requisitos previos</h3>
+<ul>
+<li>Tener una instancia EC2 creada en AWS</li>
+<li>Disponer del archivo <code>.pem</code> (clave privada)</li>
+<li>Conocer la IP pública o DNS de la instancia</li>
+<li>Tener instalado:
+<ul>
+<li>Visual Studio Code</li>
+<li>Extensión <strong>Remote - SSH</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="2-instalar-extensión-en-vs-code">2. Instalar extensión en VS Code</h3>
+<ol>
+<li>Abrir Visual Studio Code</li>
+<li>Ir a <strong>Extensiones</strong> (Ctrl + Shift + X)</li>
+<li>Buscar: <code>Remote - SSH</code></li>
+<li>Instalar la extensión de Microsoft</li>
+</ol>
+<hr>
+<h3 id="3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></h3>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    chmod 400 mi-clave.pem</code></pre>
+<hr>
+<h3 id="4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</h3>
+<p>Ruta del fichero:</p>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    ~/.ssh/config</code></pre>
+<p>Configuración:</p>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    Host mi-ec2
+        HostName IP_PUBLICA_O_DNS
+        User ubuntu
+        IdentityFile /ruta/a/mi-clave.pem</code></pre>
+<p>Ejemplo:</p>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">Host mi-ec2
+    HostName ec2-54-210-124-155.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/mi-clave.pem</code></pre>
+<hr>
+<h3 id="5-conectarse-desde-vs-code">5. Conectarse desde VS Code</h3>
+<ol>
+<li>Abrir la paleta de comandos (<code>Ctrl + Shift + P</code>)</li>
+<li>Ejecutar:
+<ul>
+<li><code>Remote-SSH: Connect to Host</code></li>
+</ul>
+</li>
+<li>Seleccionar:
+<ul>
+<li><code>mi-ec2</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-primera-conexión">6. Primera conexión</h3>
+<ul>
+<li>VS Code instalará el servidor remoto automáticamente</li>
+<li>Aceptar el fingerprint si lo solicita</li>
+<li>Esperar unos segundos</li>
+</ul>
+<hr>
+<h3 id="7-trabajar-en-la-instancia">7. Trabajar en la instancia</h3>
+<ul>
+<li>Abrir carpeta remota:</li>
+</ul>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    /var/www/html/laravel_aws</code></pre>
+<ul>
+<li>Editar archivos directamente</li>
+<li>Usar terminal integrada</li>
+</ul>
+<hr>
+<h3 id="8-problemas-comunes">8. Problemas comunes</h3>
+<h4 id="permisos-de-la-clave">Permisos de la clave</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<h4 id="error-de-conexión">Error de conexión</h4>
+<ul>
+<li>Verificar IP pública</li>
+<li>Verificar Security Group (puerto 22 abierto)</li>
+</ul>
+<h4 id="usuario-incorrecto">Usuario incorrecto</h4>
+<ul>
+<li>Ubuntu → <code>ubuntu</code></li>
+<li>Amazon Linux → <code>ec2-user</code></li>
+</ul>
+<hr>
+<h3 id="9-comprobación-manual">9. Comprobación manual</h3>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    ssh -i mi-clave.pem ubuntu@IP_PUBLICA</code></pre>
+<hr>
+<h3 id="10-recomendación">10. Recomendación</h3>
+<p>Guardar la configuración en <code>~/.ssh/config</code> permite reutilizar conexiones fácilmente y simplifica el acceso desde Visual Studio Code.</p>
 
 </div>
 

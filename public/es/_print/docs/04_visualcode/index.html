@@ -19,23 +19,23 @@
 <link rel="icon" type="image/png" href="/aws/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/aws/favicons/android-192x192.png" sizes="192x192">
 
-<title>Conexión SSH a EC2 con Visual Studio Code | Máster de Desarrollo Web</title>
+<title>Conexión SSH Visual | Máster de Desarrollo Web</title>
 <meta name="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
 <meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/04_visualcode/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
-  <meta property="og:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta property="og:title" content="Conexión SSH Visual">
   <meta property="og:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta itemprop="name" content="Conexión SSH Visual">
   <meta itemprop="description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
   <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-10-15T00:00:00+00:00">
   <meta itemprop="wordCount" content="220">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Conexión SSH a EC2 con Visual Studio Code">
+  <meta name="twitter:title" content="Conexión SSH Visual">
   <meta name="twitter:description" content="Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code">
 
 
@@ -144,7 +144,7 @@ Versión imprimible multipagina.
 
 
 
-<h1 class="title">Conexión SSH a EC2 con Visual Studio Code</h1>
+<h1 class="title">Conexión SSH Visual</h1>
 <div class="lead">Conectar a una instancia EC2 de AWS mediante SSH usando Visual Studio Code</div>
 
 
@@ -186,21 +186,21 @@ Versión imprimible multipagina.
 </ol>
 <hr>
 <h3 id="3-preparar-la-clave-pem">3. Preparar la clave <code>.pem</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> mi-clave.pem</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    chmod 400 mi-clave.pem</code></pre>
 <hr>
 <h3 id="4-configurar-el-fichero-ssh">4. Configurar el fichero SSH</h3>
 <p>Ruta del fichero:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.ssh/config</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    ~/.ssh/config</code></pre>
 <p>Configuración:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
-</span></span><span style="display:flex;"><span>HostName IP_PUBLICA_O_DNS
-</span></span><span style="display:flex;"><span>User ubuntu
-</span></span><span style="display:flex;"><span>IdentityFile /ruta/a/mi-clave.pem</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    Host mi-ec2
+        HostName IP_PUBLICA_O_DNS
+        User ubuntu
+        IdentityFile /ruta/a/mi-clave.pem</code></pre>
 <p>Ejemplo:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host mi-ec2
-</span></span><span style="display:flex;"><span>HostName ec2-54-210-124-155.compute-1.amazonaws.com
-</span></span><span style="display:flex;"><span>User ubuntu
-</span></span><span style="display:flex;"><span>IdentityFile ~/.ssh/mi-clave.pem</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">Host mi-ec2
+    HostName ec2-54-210-124-155.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/mi-clave.pem</code></pre>
 <hr>
 <h3 id="5-conectarse-desde-vs-code">5. Conectarse desde VS Code</h3>
 <ol>
@@ -228,7 +228,7 @@ Versión imprimible multipagina.
 <ul>
 <li>Abrir carpeta remota:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/var/www/html</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    /var/www/html/laravel_aws</code></pre>
 <ul>
 <li>Editar archivos directamente</li>
 <li>Usar terminal integrada</li>
@@ -249,7 +249,7 @@ Versión imprimible multipagina.
 </ul>
 <hr>
 <h3 id="9-comprobación-manual">9. Comprobación manual</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i mi-clave.pem ubuntu@IP_PUBLICA</span></span></code></pre></div>
+<pre tabindex="0"><code class="language-style=emacs" data-lang="style=emacs">    ssh -i mi-clave.pem ubuntu@IP_PUBLICA</code></pre>
 <hr>
 <h3 id="10-recomendación">10. Recomendación</h3>
 <p>Guardar la configuración en <code>~/.ssh/config</code> permite reutilizar conexiones fácilmente y simplifica el acceso desde Visual Studio Code.</p>
