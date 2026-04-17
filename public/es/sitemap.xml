@@ -50,13 +50,13 @@
     <loc>https://web.infenlaces.com/aws/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://web.infenlaces.com/aws/en/categories/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://web.infenlaces.com/aws/fr/categories/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -69,13 +69,13 @@
     <loc>https://web.infenlaces.com/aws/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://web.infenlaces.com/aws/en/tags/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://web.infenlaces.com/aws/fr/tags/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"

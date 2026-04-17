@@ -15,7 +15,7 @@ description = "Cómo acceder a learner lab"
 {{</objetivos>}}
 ---
 
-# 🚀 Acceso rápido al laboratorio
+## Acceso al laboratorio
 
 Sigue estos pasos para entrar en AWS:
 
