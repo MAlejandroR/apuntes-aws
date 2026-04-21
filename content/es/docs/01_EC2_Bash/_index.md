@@ -118,7 +118,7 @@ php artisan migrate --seed --force
 
 Con todo esto empezamos a reescribir todas las acciones
 
-{{< highlight bash "hl_lines=  10-12 17 18 23-25 30 31 36-41 46-49 55-66, style=emacs" >}}
+{{< highlight bash "hl_lines=  10-12 17-21 26-29 35-38 44-53 59-64 72-83 88 89 , style=emacs" >}}
 
 #!/bin/bash
 

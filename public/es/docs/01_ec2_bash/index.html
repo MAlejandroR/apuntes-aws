@@ -1,11 +1,11 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
-  <head>
+  <head><script src="/aws/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="application/rss&#43;xml" href="https://web.infenlaces.com/aws/es/docs/01_ec2_bash/index.xml">
-<link rel="alternate" type="text/html" href="https://web.infenlaces.com/aws/es/_print/docs/01_ec2_bash/">
-<meta name="robots" content="index, follow">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/aws/es/docs/01_ec2_bash/index.xml">
+<link rel="alternate" type="text/html" href="http://localhost:1313/aws/es/_print/docs/01_ec2_bash/">
+<meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/aws/favicons/favicon.ico" >
@@ -22,7 +22,7 @@
 <title>Crear un shell | Máster de Desarrollo Web</title>
 <meta name="description" content="Crear una EC2 básica y desplegar un Laravel">
 
-<meta property="og:url" content="https://web.infenlaces.com/aws/es/docs/01_ec2_bash/">
+<meta property="og:url" content="http://localhost:1313/aws/es/docs/01_ec2_bash/">
   <meta property="og:site_name" content="Máster de Desarrollo Web">
   <meta property="og:title" content="Crear un shell">
   <meta property="og:description" content="Crear una EC2 básica y desplegar un Laravel">
@@ -33,13 +33,13 @@
   <meta itemprop="description" content="Crear una EC2 básica y desplegar un Laravel">
   <meta itemprop="datePublished" content="2024-10-15T07:04:49+02:00">
   <meta itemprop="dateModified" content="2024-10-15T07:04:49+02:00">
-  <meta itemprop="wordCount" content="764">
+  <meta itemprop="wordCount" content="896">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Crear un shell">
   <meta name="twitter:description" content="Crear una EC2 básica y desplegar un Laravel">
 
 
-<link rel="preload" href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" as="style"><link href="/aws/scss/main.min.db457b6cdd78313927f7ff4507150c0dea29e1820e9072feae13662264a40582.css" rel="stylesheet">
+<link href="/aws/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -203,6 +203,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#incluir-un-bash-de-usuario">Incluir un bash de usuario</a></li>
+    <li><a href="#una-opción-es-forzar-la-migración-sin-pedir-confirmación">Una opción es forzar la migración sin pedir confirmación</a></li>
     <li><a href="#crear-la-instancia-con-bash">Crear la instancia con bash</a></li>
   </ul>
 </nav>
@@ -279,8 +280,18 @@ En el proceso de instalación y verificación se ha detectado un problema con Co
 Como aquí no vamos a poder interactuar con el script, creamos previamente el fichero con el comando <strong>touch</strong></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>touch database/database.sqlite</span></span></code></pre></div>
 <p>Igualemnte cuando está, como es el caso, en modo producción, pide confirmación para ejecutar las migraciones, tomando por defecto el valor no</p>
-<p>Una opción es forzar la migración sin pedir confirmación</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>php artisan migrate --seed --force</span></span></code></pre></div>
+<h2 id="una-opción-es-forzar-la-migración-sin-pedir-confirmación">Una opción es forzar la migración sin pedir confirmación</h2>
+<p>Para terminar, hay una cuestión muy importante relacionada con los usuarios.</p>
+<p>Por un lado, cuando comenzamos este script con la línea <strong>#!/bin/bash</strong>, debemos ser conscientes de que es el usuario <strong>root</strong> quien ejecuta todas las instrucciones. Por tanto, no es necesario  <code>sudo</code> dentro del script.</p>
+<p>Por otro lado, cuando clonamos el repositorio o realizamos tareas de desarrollo (como ejecutar <code>composer</code> o <code>npm</code>), es recomendable hacerlo como el usuario habitual, en este caso <strong>ubuntu</strong>.</p>
+<p>Para ejecutar comandos como otro usuario dentro del script, utilizamos:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo -u ubuntu -i <span style="color:#b44">&lt;&lt;&#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#b44">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#b44"># comandos que se ejecutan como ubuntu
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#b44">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#b44">EOF</span></span></span></code></pre></div>
+<p>El uso de <code>-i</code> permite simular un login real del usuario, cargando su entorno (<code>HOME</code>, <code>PATH</code>, etc.), lo cual es especialmente importante para herramientas como Composer o Node.
+&mdash;<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>php artisan migrate --seed --force</span></span></code></pre></div></p>
 <p>Con todo esto empezamos a reescribir todas las acciones</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;display:grid;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/bin/bash
 </span></span></span><span style="display:flex;"><span>
@@ -291,74 +302,86 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE PHP, APACHE2 y LIBRERÍAS============\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt update
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt install -y php apache2 libapache2-mod-php
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>apt update
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>apt install -y php apache2 libapache2-mod-php
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE COMPOSER =====================\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">HOME</span><span style="color:#666">=</span>/root
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">export</span> <span style="color:#b8860b">COMPOSER_ALLOW_SUPERUSER</span><span style="color:#666">=</span><span style="color:#666">1</span>
-</span></span><span style="display:flex;"><span>curl https://getcomposer.org/installer -o composer.phar
-</span></span><span style="display:flex;"><span>sudo php composer.phar --install-dir<span style="color:#666">=</span>/usr/local/bin --filename<span style="color:#666">=</span>composer
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>curl https://getcomposer.org/installer -o composer.phar
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>php composer.phar --install-dir<span style="color:#666">=</span>/usr/local/bin --filename<span style="color:#666">=</span>composer
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>composer --version
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE NODE =====================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============INSTALACIÓN DE NODE =====================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>curl https://deb.nodesource.com/setup_24.x -o node.sh
-</span></span><span style="display:flex;"><span>sudo -E bash ./node.sh <span style="color:#666">&amp;&amp;</span> sudo apt install -y nodejs
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo -E bash ./node.sh <span style="color:#666">&amp;&amp;</span> sudo apt install -y nodejs
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>npm -v
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>node -v
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============CLONAR EL PROYECTO LARAVEL =====================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo chown ubuntu:www-data /var/www/html
-</span></span><span style="display:flex;"><span><span style="color:#a2f">cd</span> /var/www/html
-</span></span><span style="display:flex;"><span>git clone https://github.com/MAlejandroR/laravel_aws.git
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chown -R ubuntu:www-data /var/www/html
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chmod -R <span style="color:#666">775</span> /var/www/html
+</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">cd</span> /var/www/html
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo -u ubuntu git clone https://github.com/MAlejandroR/laravel_aws.git
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============ORQUETAR, ASSETS, MIGRACIONES, links =====================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============ORQUETAR, ASSETS, MIGRACIONES, links =====================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
 </span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">cd</span> /var/www/html/laravel_aws
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>composer update
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>npm install
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>npm run build
-</span></span><span style="display:flex;"><span>touch database/database.sqlite
-</span></span><span style="display:flex;"><span>php artisan migrate --seed --force
-</span></span><span style="display:flex;"><span>php artisan storage:link
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo -u ubuntu bash <span style="color:#b44">&lt;&lt;EOF
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">composer update
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">npm install
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">npm run build
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">touch database/database.sqlite
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">php artisan migrate --seed --force
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">php artisan storage:link
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">EOF</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============DAR PERMISOS A CARPETAS DEL PROYECTO ==============\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>sudo chown -R ubuntu:www-data /var/www/html/laravel_aws
-</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/storage -R
-</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/database/database.sqlite -R
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============DAR PERMISOS A CARPETAS DEL PROYECTO ==============\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;=================================================================\n\n&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chown -R ubuntu:www-data /var/www/html/laravel_aws
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chown -R www-data:www-data /var/www/html/laravel_aws/storage
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chown -R www-data:www-data /var/www/html/laravel_aws/bootstrap/cache
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/storage -R
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>chmod <span style="color:#666">775</span> /var/www/html/laravel_aws/database/database.sqlite -R
 </span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"># Para las sesiones necesitamos permisos explícitos para www-data</span>
-</span></span><span style="display:flex;"><span>sudo chown -R www-data:www-data /var/www/html/laravel_aws/storage bootstrap/cache
-</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#666">775</span> storage /var/www/html/laravel_aws/bootstrap/cache
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>
-</span></span><span style="display:flex; background-color:#dfdfdf"><span>
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n&#34;</span>;
-</span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
 </span></span><span style="display:flex; background-color:#dfdfdf"><span>cat &gt; /etc/apache2/sites-available/000-default.conf <span style="color:#b44">&lt;&lt;EOF
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">    &lt;VirtualHost *:80&gt;
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        ServerAdmin webmaster@localhost
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        DocumentRoot /var/www/html/laravel_aws/public
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">        &lt;Directory /var/www/html/laravel_aws/public&gt;
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            AllowOverride All
-</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">            Require all granted
-</span></span></span><span style="display:flex;"><span><span style="color:#b44">        &lt;/Directory&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#b44">            ErrorLog \${APACHE_LOG_DIR}/error.log
-</span></span></span><span style="display:flex;"><span><span style="color:#b44">            CustomLog \${APACHE_LOG_DIR}/access.log combined
-</span></span></span><span style="display:flex;"><span><span style="color:#b44">    &lt;/VirtualHost&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#b44">EOF</span>
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">&lt;VirtualHost *:80&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">ServerAdmin webmaster@localhost
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">DocumentRoot /var/www/html/laravel_aws/public
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">&lt;Directory /var/www/html/laravel_aws/public&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">AllowOverride All
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">Require all granted
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">&lt;/Directory&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">ErrorLog \${APACHE_LOG_DIR}/error.log
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">CustomLog \${APACHE_LOG_DIR}/access.log combined
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">&lt;/VirtualHost&gt;
+</span></span></span><span style="display:flex; background-color:#dfdfdf"><span><span style="color:#b44">EOF</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;===============HABILITAR EL MODO REWRITE Y REBOTAR EL SERVICIO ==============\n&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a2f">printf</span> <span style="color:#b44">&#34;========================================================\n&#34;</span>
-</span></span><span style="display:flex;"><span>sudo a2enmod rewrite
-</span></span><span style="display:flex;"><span>sudo systemctl restart apache2
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>a2enmod rewrite
+</span></span><span style="display:flex; background-color:#dfdfdf"><span>systemctl restart apache2
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#b8860b">fin</span><span style="color:#666">=</span><span style="color:#a2f;font-weight:bold">$(</span>date +%s<span style="color:#a2f;font-weight:bold">)</span>
@@ -479,8 +502,8 @@ Como aquí no vamos a poder interactuar con el script, creamos previamente el fi
 
     </div>
     <script src='/aws/js/deflate.js'></script>
-<script src="/aws/js/main.min.6205de85bc0525b82a15bfb0ab283083c0fa3467be5e2e03a9774de81b5662a2.js" integrity="sha256-YgXehbwFJbgqFb&#43;wqygwg8D6NGe&#43;Xi4DqXdN6BtWYqI=" crossorigin="anonymous"></script>
-<script defer src="/aws/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src="/aws/js/main.js"></script>
+<script defer src="/aws/js/click-to-copy.js" crossorigin="anonymous"></script>
 <script src='/aws/js/tabpane-persist.js'></script>
 
   </body>
