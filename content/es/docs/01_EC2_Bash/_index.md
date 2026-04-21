@@ -94,8 +94,25 @@ touch database/database.sqlite
 Igualemnte cuando está, como es el caso, en modo producción, pide confirmación para ejecutar las migraciones, tomando por defecto el valor no
 
 Una opción es forzar la migración sin pedir confirmación
+---
+Para terminar, hay una cuestión muy importante relacionada con los usuarios.
 
-{{< highlight bash "linenos=inline, hl_lines=, style=emacs" >}}
+Por un lado, cuando comenzamos este script con la línea **#!/bin/bash**, debemos ser conscientes de que es el usuario **root** quien ejecuta todas las instrucciones. Por tanto, no es necesario  `sudo` dentro del script.
+
+Por otro lado, cuando clonamos el repositorio o realizamos tareas de desarrollo (como ejecutar `composer` o `npm`), es recomendable hacerlo como el usuario habitual, en este caso **ubuntu**.
+
+Para ejecutar comandos como otro usuario dentro del script, utilizamos:
+
+{{< highlight bash "linenos=inline, style=emacs" >}}
+sudo -u ubuntu -i <<'EOF'
+
+# comandos que se ejecutan como ubuntu
+
+EOF
+{{< /highlight >}}
+
+El uso de `-i` permite simular un login real del usuario, cargando su entorno (`HOME`, `PATH`, etc.), lo cual es especialmente importante para herramientas como Composer o Node.
+---{{< highlight bash "linenos=inline, hl_lines=, style=emacs" >}}
 php artisan migrate --seed --force
 {{< /highlight >}}
 
@@ -112,9 +129,9 @@ inicio=$(date +%s)
 printf "=================================================================\n";
 printf "===============INSTALACIÓN DE PHP, APACHE2 y LIBRERÍAS============\n";
 printf "=================================================================\n\n";
-sudo apt update
-sudo apt install -y php apache2 libapache2-mod-php
-sudo apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
+apt update
+apt install -y php apache2 libapache2-mod-php
+apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
 
 printf "=================================================================\n";
 printf "===============INSTALACIÓN DE COMPOSER =====================\n";
@@ -122,25 +139,32 @@ printf "=================================================================\n\n";
 export HOME=/root
 export COMPOSER_ALLOW_SUPERUSER=1
 curl https://getcomposer.org/installer -o composer.phar
-sudo php composer.phar --install-dir=/usr/local/bin --filename=composer
+php composer.phar --install-dir=/usr/local/bin --filename=composer
+composer --version
 
 printf "=================================================================\n";
 printf "===============INSTALACIÓN DE NODE =====================\n";
 printf "=================================================================\n\n";
 curl https://deb.nodesource.com/setup_24.x -o node.sh
 sudo -E bash ./node.sh && sudo apt install -y nodejs
+npm -v
+node -v
 
 printf "=================================================================\n";
 printf "===============CLONAR EL PROYECTO LARAVEL =====================\n";
 printf "=================================================================\n\n";
-sudo chown ubuntu:www-data /var/www/html
+
+chown -R ubuntu:www-data /var/www/html
+chmod -R 775 /var/www/html
 cd /var/www/html
-git clone https://github.com/MAlejandroR/laravel_aws.git
+sudo -u ubuntu git clone https://github.com/MAlejandroR/laravel_aws.git
+
 
 printf "=================================================================\n";
 printf "===============ORQUETAR, ASSETS, MIGRACIONES, links =====================\n";
 printf "=================================================================\n\n";
 cd /var/www/html/laravel_aws
+sudo -u ubuntu bash <<EOF
 composer update
 npm install
 npm run build
@@ -148,38 +172,43 @@ touch database/database.sqlite
 php artisan migrate --seed --force
 php artisan storage:link
 
+EOF
+
 printf "=================================================================\n";
 printf "===============DAR PERMISOS A CARPETAS DEL PROYECTO ==============\n";
 printf "=================================================================\n\n";
-sudo chown -R ubuntu:www-data /var/www/html/laravel_aws
-sudo chmod 775 /var/www/html/laravel_aws/storage -R
-sudo chmod 775 /var/www/html/laravel_aws/database/database.sqlite -R
+
+chown -R ubuntu:www-data /var/www/html/laravel_aws
+chown -R www-data:www-data /var/www/html/laravel_aws/storage
+chown -R www-data:www-data /var/www/html/laravel_aws/bootstrap/cache
+
+chmod 775 /var/www/html/laravel_aws/storage -R
+chmod 775 /var/www/html/laravel_aws/database/database.sqlite -R
 # Para las sesiones necesitamos permisos explícitos para www-data
-sudo chown -R www-data:www-data /var/www/html/laravel_aws/storage bootstrap/cache
-sudo chmod -R 775 storage /var/www/html/laravel_aws/bootstrap/cache
+
 
 
 printf "========================================================\n"
 printf "===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n";
 printf "========================================================\n"
 cat > /etc/apache2/sites-available/000-default.conf <<EOF
-    <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/html/laravel_aws/public
-        <Directory /var/www/html/laravel_aws/public>
-            AllowOverride All
-            Require all granted
-        </Directory>
-            ErrorLog \${APACHE_LOG_DIR}/error.log
-            CustomLog \${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>
+<VirtualHost *:80>
+ServerAdmin webmaster@localhost
+DocumentRoot /var/www/html/laravel_aws/public
+<Directory /var/www/html/laravel_aws/public>
+AllowOverride All
+Require all granted
+</Directory>
+ErrorLog \${APACHE_LOG_DIR}/error.log
+CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 EOF
 
 printf "========================================================\n"
 printf "===============HABILITAR EL MODO REWRITE Y REBOTAR EL SERVICIO ==============\n";
 printf "========================================================\n"
-sudo a2enmod rewrite
-sudo systemctl restart apache2
+a2enmod rewrite
+systemctl restart apache2
 
 
 fin=$(date +%s)
@@ -191,7 +220,6 @@ printf "========================================================\n"
 printf "=======FIN SCRIPT===============\n"
 printf "========================================================\n"
 echo "Tiempo total: $minutos minutos y $segundos segundos"
-
 {{< /highlight >}}
 
 

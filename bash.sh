@@ -1,0 +1,101 @@
+#!/bin/bash
+
+exec > /var/log/user-data.log 2>&1
+
+inicio=$(date +%s)
+
+printf "=================================================================\n";
+printf "===============INSTALACIÓN DE PHP, APACHE2 y LIBRERÍAS============\n";
+printf "=================================================================\n\n";
+apt update
+apt install -y php apache2 libapache2-mod-php
+apt install -y php-mbstring php-xml php-zip php-sqlite3 php-curl php-mysql
+
+printf "=================================================================\n";
+printf "===============INSTALACIÓN DE COMPOSER =====================\n";
+printf "=================================================================\n\n";
+export HOME=/root
+export COMPOSER_ALLOW_SUPERUSER=1
+curl https://getcomposer.org/installer -o composer.phar
+php composer.phar --install-dir=/usr/local/bin --filename=composer
+composer --version
+
+printf "=================================================================\n";
+printf "===============INSTALACIÓN DE NODE =====================\n";
+printf "=================================================================\n\n";
+curl https://deb.nodesource.com/setup_24.x -o node.sh
+sudo -E bash ./node.sh && sudo apt install -y nodejs
+npm -v
+node -v
+
+printf "=================================================================\n";
+printf "===============CLONAR EL PROYECTO LARAVEL =====================\n";
+printf "=================================================================\n\n";
+
+chown ubuntu:www-data /var/www/html
+cd /var/www/html
+git clone https://github.com/MAlejandroR/laravel_aws.git
+chown ubuntu:www-data /var/www/html/laravel_aws
+
+printf "=================================================================\n";
+printf "===============ORQUETAR, ASSETS, MIGRACIONES, links =====================\n";
+printf "=================================================================\n\n";
+cd /var/www/html/laravel_aws
+composer update
+npm install
+npm run build
+touch database/database.sqlite
+php artisan migrate --seed --force
+php artisan storage:link
+
+printf "=================================================================\n";
+printf "===============DAR PERMISOS A CARPETAS DEL PROYECTO ==============\n";
+printf "=================================================================\n\n";
+chown -R ubuntu:www-data /var/www/html/laravel_aws
+chmod 775 /var/www/html/laravel_aws/storage -R
+chmod 775 /var/www/html/laravel_aws/database/database.sqlite -R
+# Para las sesiones necesitamos permisos explícitos para www-data
+chown -R www-data:www-data /var/www/html/laravel_aws/storage
+chown -R www-data:www-data /var/www/html/laravel_aws/bootstrap/cache
+chmod -R 775 /var/www/html/laravel_aws/storage
+chmod -R 775 /var/www/html/laravel_aws/bootstrap/cache
+
+
+printf "========================================================\n"
+printf "===============MODIFICAR EL FICHERO DE CONFITURACIÓN ==============\n";
+printf "========================================================\n"
+cat > /etc/apache2/sites-available/000-default.conf <<EOF
+    <VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html/laravel_aws/public
+        <Directory /var/www/html/laravel_aws/public>
+            AllowOverride All
+            Require all granted
+        </Directory>
+            ErrorLog \${APACHE_LOG_DIR}/error.log
+            CustomLog \${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+EOF
+
+printf "========================================================\n"
+printf "===============HABILITAR EL MODO REWRITE Y REBOTAR EL SERVICIO ==============\n";
+printf "========================================================\n"
+a2enmod rewrite
+systemctl restart apache2
+
+
+fin=$(date +%s)
+duracion=$((fin - inicio))
+minutos=$((duracion / 60))
+segundos=$((duracion % 60 ))
+
+printf "========================================================\n"
+printf "=======FIN SCRIPT===============\n"
+printf "========================================================\n"
+echo "Tiempo total: $minutos minutos y $segundos segundos"
+
+
+
+#********************************** IMPORTANTE
+#chown -R www-data:www-data storage
+#chown -R www-data:www-data bootstrap/cache

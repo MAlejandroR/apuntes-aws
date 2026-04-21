@@ -50,13 +50,13 @@
     <loc>https://web.infenlaces.com/aws/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://web.infenlaces.com/aws/fr/categories/"
+                hreflang="en"
+                href="https://web.infenlaces.com/aws/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://web.infenlaces.com/aws/en/categories/"
+                hreflang="fr"
+                href="https://web.infenlaces.com/aws/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
